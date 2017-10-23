@@ -1,0 +1,47 @@
+# Travis CI configuration file.
+
+dist: trusty
+
+sudo: false
+
+language: php
+
+php:
+    - 7.1
+
+services:
+    - postgresql
+
+addons:
+    postgresql: "9.6"
+    chrome: stable
+
+before_install: phpenv config-rm xdebug.ini
+
+install:
+    - composer install --no-interaction
+
+before_script:
+    - psql -U postgres -c "create database eventz_test;"
+    - psql -U postgres -c "create user eventz password 'eventz' superuser;"
+    - db/load.sh test
+    - |
+      if [ -f tests/acceptance.suite.yml ]; then
+        tests/descargar_chromedriver.sh
+        tests/ejecutar_pruebas_aceptacion.sh -q
+        sleep 3
+      fi
+
+script:
+    - vendor/bin/codecept run
+    - vendor/bin/phpcs
+
+notifications:
+    email: false
+
+# # Cache folder, you can delete cache from Travis CI web interface
+# cache:
+#     directories:
+#         - vendor
+#         - $HOME/.composer/cache
+

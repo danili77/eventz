@@ -69,7 +69,7 @@ AppAsset::register($this);
     <div class="container">
         <p class="pull-left">&copy; Eventz <?= date('Y') ?></p>
 
-        <p class="pull-right"><?= Yii::powered() ?></p>
+        <p class="pull-right">/*<?= "Desarrollado por: Daniel Lorenzo Ibañez" ?></p>
     </div>
 </footer>
 

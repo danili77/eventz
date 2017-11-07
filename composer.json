@@ -15,16 +15,16 @@
     "minimum-stability": "stable",
     "require": {
         "php": "~7.1.0",
-        "ext-gd": "*",
-        "ext-intl": "*",
         "yiisoft/yii2": "~2.0.5",
         "yiisoft/yii2-bootstrap": "~2.0.0",
         "yiisoft/yii2-swiftmailer": "~2.0.0",
-        "fxp/composer-asset-plugin": "^1.3.1",
-        "joni-jones/yii2-heroku-logger": "dev-master"
+        "joni-jones/yii2-heroku-logger": "dev-master",
+	"ext-gd": "*",
+	"ext-intl": "*",
+	"fxp/composer-asset-plugin": "^1.3.1",
+	"yiisoft/yii2-debug": "~2.0.0"
     },
     "require-dev": {
-        "yiisoft/yii2-debug": "~2.0.0",
         "yiisoft/yii2-gii": "~2.0.0",
         "yiisoft/yii2-faker": "~2.0.0",
         "yiisoft/yii2-shell": "^2.0",

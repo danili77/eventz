@@ -15,6 +15,7 @@ body {
 }
 
 .footer {
+    color:white;
     height: 60px;
     background-color: #003366;
     border-top: 1px solid #ddd;
@@ -114,7 +115,35 @@ a.desc:after {
     outline: none;
 }
 
+/*  Mi estilo */
+
+*
+{
+  font-family: 'Orbitron', sans-serif;
+}
+
 #w0
 {
   background-color: #003366;
+}
+
+#w0 a
+{
+  color:white;
+}
+
+#w0 a:focus
+{
+  border-radius:12px;
+}
+
+#w0 p
+{
+  font-size: 23px;
+  font-weight:bold;
+}
+
+#w0 li a
+{
+  font-size:13px;
 }

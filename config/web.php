@@ -23,7 +23,7 @@ $config = [
             'enablePrettyUrl' => true,
         ],
         'user' => [
-            'identityClass' => 'app\models\User',
+            'identityClass' => 'app\models\Usuario',
             'enableAutoLogin' => true,
         ],
         'errorHandler' => [
@@ -38,19 +38,19 @@ $config = [
         ],
         'log' => require(__DIR__ . '/log.php'),
         'db' => $db,
-        /*
+
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
             ],
         ],
-        */
     ],
     'params' => $params,
 ];
 
-/*if (YII_ENV_DEV) {
+/* Quitar esto para quitar logo de debajo a la derecha */
+if (YII_ENV_DEV) {
     // configuration adjustments for 'dev' environment
     $config['bootstrap'][] = 'debug';
     $config['modules']['debug'] = [
@@ -65,6 +65,6 @@ $config = [
         // uncomment the following to add your IP if you are not connecting from localhost.
         //'allowedIPs' => ['127.0.0.1', '::1'],
     ];
-}*/
+}
 
 return $config;

@@ -8,18 +8,17 @@ $this->title = 'Eventz';
     <div id="contenido">
         <section>
             <h1>Eventz</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Eventz es una aplicación en la que cualquier usuario puede organizar eventos,comentarlos además dispone de un calendario donde visualizar los eventos mas rápidamente.</p>
             <div>
                 <article>
                   <h2>Características</h2>
-                  <p>lorem ipsum</p>
+                  <p>Dispone de las siguientes caracteristicas: </p>
                   <ul>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
+                      <li>Gestión de Eventos.</li>
+                      <li>Paso de listado de eventos a documento PDF.</li>
+                      <li>Gestión de Comentarios sobre eventos.</li>
+                      <li>Calendario interactivo.Donde es posible ver los eventos y crear nuevos.</li>
+                      <li>Gestión de Usuarios(Solo el administrador de la página)</li>
                   </ul>
                 </article>
 

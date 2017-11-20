@@ -2,9 +2,10 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\jui\DatePicker;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Evento */
+/* @var $modl app\models\Evento */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
@@ -16,7 +17,9 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'descripcion')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'fecha')->textInput() ?>
+    <?= $form->field($model,'fecha')->widget(DatePicker::className(),[
+      'dateFormat' => 'dd-MM-yyyy',
+    ]) ?>
 
     <?= $form->field($model, 'lugar')->textInput(['maxlength' => true]) ?>
 

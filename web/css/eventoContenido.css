@@ -11,3 +11,12 @@ h1, h2 {
     color: #003366;
     font-weight: bold;
 }
+
+
+
+
+table a:nth-child(1),table a:nth-child(2),table a:nth-child(3)
+{
+    margin:2px;
+    width:100px;
+}

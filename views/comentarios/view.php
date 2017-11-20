@@ -30,6 +30,8 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'texto_comentario',
             'fecha:datetime',
+            'eventos_id',
+            'usuarios_id',
         ],
     ]) ?>
 

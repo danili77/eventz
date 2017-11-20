@@ -5,6 +5,7 @@ namespace app\controllers;
 use Yii;
 use app\models\Evento;
 use app\models\EventosSearch;
+use app\models\TipoEvento;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -35,12 +36,9 @@ class EventosController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new EventosSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
+        $model = Evento::find()->orderBy('fecha DESC')->all();
         return $this->render('index', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
+            'model' => $model,
         ]);
     }
 
@@ -72,6 +70,8 @@ class EventosController extends Controller
                 'model' => $model,
             ]);
         }
+
+
     }
 
     /**

@@ -20,6 +20,7 @@ use Yii;
  */
 class Evento extends \yii\db\ActiveRecord
 {
+    public $tipos;
     /**
      * @inheritdoc
      */
@@ -59,6 +60,22 @@ class Evento extends \yii\db\ActiveRecord
             'tipo_evento' => 'Tipo de evento',
             'usuarios_id' => 'Usuario',
         ];
+    }
+
+
+    /**
+     * Devuelve el número de comentarios que tiene una noticia concreta
+     * @param  int $id_noticia El id de la noticia
+     * @return int El número de comentarios que tiene la noticia pasada como parametro
+     */
+    public function cuantosComentarios($id_evento)
+    {
+        return $comentarios = $this->getComentarios()->where(['eventos_id' => $id_evento])->count();
+    }
+
+    public function getComentarios()
+    {
+        return $this->hasMany(Comentario::className(), ['eventos_id' => 'id'])->inverseOf('idEvento');
     }
 
     /**

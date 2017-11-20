@@ -31,7 +31,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'nombre',
             'descripcion:ntext',
-            'fecha',
+            'fecha:datetime',
             'lugar',
             'tipo_evento',
             'usuarios_id',

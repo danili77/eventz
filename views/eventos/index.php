@@ -13,10 +13,11 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="evento-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
+    <br>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Evento', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Crear Evento', ['create'], ['class' => 'btn btn-success']) ?>
         <?= Html::a('Calendario', ['create'], ['class' => 'btn btn-success']) ?>
         <?= Html::a('Convertir a pdf', ['create'], ['class' => 'btn btn-success']) ?>
     </p>

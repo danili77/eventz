@@ -48,8 +48,8 @@ class Comentario extends \yii\db\ActiveRecord
             'id' => 'ID',
             'texto_comentario' => 'Texto Comentario',
             'fecha' => 'Fecha',
-            'eventos_id' => 'Eventos ID',
-            'usuarios_id' => 'Usuarios ID',
+            'eventos_id' => 'Evento',
+            'usuarios_id' => 'Usuario',
         ];
     }
 

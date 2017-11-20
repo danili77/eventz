@@ -1,0 +1,13 @@
+#contenido {
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    margin: auto;
+    font-size: 15px;
+    text-align: justify;
+}
+
+h1, h2 {
+    color: #003366;
+    font-weight: bold;
+}

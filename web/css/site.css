@@ -24,7 +24,7 @@ body {
 
 .jumbotron {
     text-align: center;
-    background-color: transparent;
+    background-color: transparent#003366;
 }
 
 .jumbotron .btn {
@@ -121,16 +121,6 @@ a.desc:after {
 {
   font-family: 'Orbitron', sans-serif;
   font-size:14px;
-}
-
-#w0
-{
-  background-color: #003366;
-}
-
-#w0 a
-{
-  color:white;
 }
 
 #w0 a:focus

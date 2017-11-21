@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\jui\DatePicker;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Comentario */
@@ -14,7 +15,10 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'texto_comentario')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'fecha')->textInput() ?>
+    <?= $form->field($model,'fecha')->widget(DatePicker::className(),[
+      'dateFormat' => 'dd-MM-yyyy',
+      'language' =>'es',
+    ]) ?>
 
     <?= $form->field($model, 'eventos_id')->textInput() ?>
 

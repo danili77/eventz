@@ -4,9 +4,14 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\jui\DatePicker;
 
+use app\models\TipoEvento;
+
 /* @var $this yii\web\View */
 /* @var $modl app\models\Evento */
 /* @var $form yii\widgets\ActiveForm */
+
+
+$tipos = TipoEvento::find()->select('tipo, id')->orderBy('tipo')->indexBy('id')->column();
 ?>
 
 <div class="evento-form">
@@ -19,11 +24,12 @@ use yii\jui\DatePicker;
 
     <?= $form->field($model,'fecha')->widget(DatePicker::className(),[
       'dateFormat' => 'dd-MM-yyyy',
+      'language' =>'es',
     ]) ?>
 
     <?= $form->field($model, 'lugar')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'tipo_evento')->textInput() ?>
+    <?= $form->field($model, 'tipo_evento')->textInput()->dropDownList($tipos) ?>
 
     <?= $form->field($model, 'usuarios_id')->textInput() ?>
 

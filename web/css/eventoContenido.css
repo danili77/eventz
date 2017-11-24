@@ -12,11 +12,30 @@ h1, h2 {
     font-weight: bold;
 }
 
-
-
-
 table a:nth-child(1),table a:nth-child(2),table a:nth-child(3)
 {
     margin:2px;
     width:100px;
+}
+
+*
+{
+  font-family: 'Orbitron', sans-serif;
+  font-size:14px;
+}
+
+nav#w0
+{
+  background-color: #003366;
+}
+
+#w0 p
+{
+  font-size: 23px;
+  font-weight:bold;
+}
+
+#w0 li a
+{
+  font-size:13px;
 }

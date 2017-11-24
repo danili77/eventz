@@ -2,10 +2,12 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use app\assets\AppAsset;
 
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\EventoSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
+AppAsset::register($this);
 
 $this->title = 'Eventos';
 $this->params['breadcrumbs'][] = $this->title;

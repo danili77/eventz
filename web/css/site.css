@@ -123,9 +123,9 @@ a.desc:after {
   font-size:14px;
 }
 
-#w0 a:focus
+nav#w0
 {
-  border-radius:12px;
+  background-color: #003366;
 }
 
 #w0 p
@@ -138,3 +138,15 @@ a.desc:after {
 {
   font-size:13px;
 }
+
+#w0 img
+{
+  -webkit-animation:spin 4s linear 2s;
+  -moz-animation:spin 4s linear 2s infinite;
+  animation:spin 4s linear 2s infinite;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotateY(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotateY(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotateX(360deg); transform:rotateY(360deg); } }
+--

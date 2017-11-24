@@ -51,7 +51,8 @@ AppAsset::register($this);
                 )
                 . Html::endForm()
                 . '</li>'
-            )
+            ),
+            ['label' => 'Registro', 'url' => ['/usuarios/create']]
         ],
     ]);
     NavBar::end();

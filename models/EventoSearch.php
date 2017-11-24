@@ -8,9 +8,9 @@ use yii\data\ActiveDataProvider;
 use app\models\Evento;
 
 /**
- * EventosSearch represents the model behind the search form about `app\models\Evento`.
+ * EventoSearch represents the model behind the search form about `app\models\Evento`.
  */
-class EventosSearch extends Evento
+class EventoSearch extends Evento
 {
     /**
      * @inheritdoc

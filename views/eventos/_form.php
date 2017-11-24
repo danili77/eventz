@@ -3,15 +3,13 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\jui\DatePicker;
-
 use app\models\TipoEvento;
 
-/* @var $this yii\web\View */
-/* @var $modl app\models\Evento */
-/* @var $form yii\widgets\ActiveForm */
-
-
 $tipos = TipoEvento::find()->select('tipo, id')->orderBy('tipo')->indexBy('id')->column();
+
+/* @var $this yii\web\View */
+/* @var $model app\models\Evento */
+/* @var $form yii\widgets\ActiveForm */
 ?>
 
 <div class="evento-form">

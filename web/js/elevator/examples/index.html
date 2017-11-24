@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+
+	<title>jQuery-Plugin-Boilerplate - Example - Basic Elevator with options</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--// STYLES & SCRIPTS //-->
+	<link rel="stylesheet" href="../libs/bootstrap-3.3.6.min.css">
+	<script src="../libs/jquery-1.12.4.min.js"></script>
+	<script src="../libs/bootstrap-3.3.6.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/jquery.tcg-elevator.css">
+	<script type="text/javascript" src="../src/jquery.tcg-elevator.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<!--// END STYLES & SCRIPTS //-->
+</head>
+
+<body>
+	<div id="content">
+		<div class="container">
+			<h2>Basic usage (no options)</h2>
+		</div>
+		<section>
+			<div class="container">
+				<p>
+					<a href="#" class="btn btn-primary toggle-all">Open/close all</a>
+				</p>
+				<div class="panel panel-primary tcg-elevator">
+					<div class="panel-heading tcg-elevator-toggle">
+						<h3 class="panel-title">Panel title</h3>
+					</div>
+					<div class="panel-body tcg-elevator-content">
+						Panel content
+					</div>
+				</div>
+				<div class="panel panel-primary tcg-elevator">
+					<div class="panel-heading tcg-elevator-toggle">
+						<h3 class="panel-title">Panel title</h3>
+					</div>
+					<div class="panel-body tcg-elevator-content">
+						Panel content
+					</div>
+				</div>
+				<div class="panel panel-primary tcg-elevator">
+					<div class="panel-heading tcg-elevator-toggle">
+						<h3 class="panel-title">Panel title</h3>
+					</div>
+					<div class="panel-body tcg-elevator-content">
+						Panel content
+					</div>
+				</div>
+			</div>
+		</section>
+		<div class="container">
+			<h2>Customized usage</h2>
+			<h3>Options set to</h3>
+			<ul>
+				<li>
+					toggleSelector: '.panel-heading',
+				</li>
+				<li>
+					contentSelector: '.panel-body',
+				</li>
+				<li>
+					speed: 500,
+				</li>
+				<li>
+					openingSpeed: 500,
+				</li>
+				<li>
+					closingSpeed: 1000,
+				</li>
+				<li>
+					openClass: 'open',
+				</li>
+				<li>
+					openingClass: 'opening',
+				</li>
+				<li>
+					closingClass: 'closing'
+				</li>
+			</ul>
+		</div>
+		<section>
+			<div class="container">
+				<div class="panel panel-primary elevator">
+					<div class="panel-heading">
+						<h3 class="panel-title">Panel title</h3>
+					</div>
+					<div class="panel-body">
+						Panel content
+					</div>
+				</div>
+				<div class="panel panel-primary elevator">
+					<div class="panel-heading">
+						<h3 class="panel-title">Panel title</h3>
+					</div>
+					<div class="panel-body">
+						Panel content
+					</div>
+				</div>
+				<div class="panel panel-primary elevator">
+					<div class="panel-heading">
+						<h3 class="panel-title">Panel title</h3>
+					</div>
+					<div class="panel-body">
+						Panel content
+					</div>
+				</div>
+				<div class="panel panel-primary elevator">
+					<div class="panel-heading">
+						<h3 class="panel-title">Panel title</h3>
+					</div>
+					<div class="panel-body">
+						Panel content
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</body>
+
+</html>

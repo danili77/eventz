@@ -12,7 +12,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="usuario-view">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h1>Usuario: <?= Html::encode($this->title) ?></h1>
 
     <p>
         <?= Html::a('Modificar', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
@@ -30,6 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
 
             'nombre',
+            'created_at:datetime'
         ],
     ]) ?>
 

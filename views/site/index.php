@@ -12,7 +12,7 @@ $this->title = 'Eventz';
 <div class="site-index">
     <div class="body-content">
             <br>
-            <div class="jR3DCarouselGallery"></div>
+            <!--<div class="jR3DCarouselGallery"></div>-->
     </div>
     <div id="contenido">
         <section>

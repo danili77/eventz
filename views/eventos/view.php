@@ -12,7 +12,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="evento-view">
 
-    <h1>Evento: <?= Html::encode($this->title) ?></h1>
+    <h1>Evento: <?= Html::encode($model->nombre) ?></h1>
 
     <p>
         <?= Html::a('Modificar', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>

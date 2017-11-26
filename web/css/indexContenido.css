@@ -48,8 +48,3 @@ ul li
 {
   list-style-image: url("/imagenes/logoLista.ico");
 }
-
-#mensajeBienvenida
-{
-  visibility:hidden;
-}

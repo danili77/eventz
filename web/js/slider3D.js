@@ -4,7 +4,7 @@ $(document).ready(function(){
       "height": 350,
       "slideLayout": "fill",
       "animation": "slide3D",
-      "animationCurve": "ease",
+      "animationCurve": "linear",
       "animationDuration": 1200,
       "animationInterval": 2000,
       "autoplay": true,

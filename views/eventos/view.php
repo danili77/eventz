@@ -38,4 +38,33 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]) ?>
 
+    <h3>Comentarios (<?= $numComentarios; ?>)</h3><br><br>
+    <!-- Html::a('Profile', ['user/view', 'id' => $id], ['class' => 'profile-link'])  -->
+    <?= Html::a(
+      'Comentar',
+      ['../comentarios/create', 'id' => $model->id],
+      ['class' => 'btn btn-success']
+    ); ?><br><br>
+    <?php foreach ($comentarios as $comentario) {?>
+      <div class="bg-info">
+
+        <p><?= $comentario->texto_comentario ?></p>
+        <p>Autor del comentario:<?= $comentario->usuarios_id ?></p>
+        <p>Fecha comentario:<?= Yii::$app->formatter->asDate($comentario->fecha, 'php:d-m-Y');?></p>
+        <?= Html::a('Ver', ['/comentarios/view', 'id' => $comentario->id], ['class' => 'btn btn-xs btn-info btnsAction']) ?>
+        <?= Html::a('Modificar', ['/comentarios/update', 'id' => $comentario->id], ['class' => 'btn btn-xs btn-warning']) ?>
+        <?= Html::a('Eliminar', ['/comentarios/delete', 'id' => $comentario->id], [
+          'class' => 'btn btn-xs btn-danger',
+          'data' => [
+            'confirm' => '¿Esta seguro que desea eliminar este evento?',
+            'method' => 'post',
+          ],
+          ]) ?>
+        </div><br>
+
+
+      <?php } ?>
+      <hr>
+      <br><br>
+
 </div>

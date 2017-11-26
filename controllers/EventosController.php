@@ -36,10 +36,24 @@ class EventosController extends Controller
   */
   public function actionIndex()
   {
+
+    $events = Evento::find()->all();
+
+    $tasks = [];
+    foreach ($events as $eve)
+    {
+      $event = new \yii2fullcalendar\models\Event();
+      $event->id = $eve->id;
+      $event->title = $eve->nombre;
+      $event->start = $eve->fecha;
+      $tasks[] = $event;
+    }
+
     $searchModel = new EventoSearch();
     $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
     return $this->render('index', [
+      'events' => $tasks,
       'searchModel' => $searchModel,
       'dataProvider' => $dataProvider,
     ]);
@@ -79,14 +93,15 @@ class EventosController extends Controller
   * If creation is successful, the browser will be redirected to the 'view' page.
   * @return mixed
   */
-  public function actionCreate()
+  public function actionCreate($date)
   {
     $model = new Evento();
+    $model->fecha = $date;
 
     if ($model->load(Yii::$app->request->post()) && $model->save()) {
       return $this->redirect(['view', 'id' => $model->id]);
     } else {
-      return $this->render('create', [
+      return $this->renderAjax('create', [
         'model' => $model,
       ]);
     }

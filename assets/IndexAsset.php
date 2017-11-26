@@ -29,6 +29,7 @@ class IndexAsset extends AssetBundle
     public $js = [
         '/js/jR3D/jR3D.min.js',
         '/js/slider3D.js',
+          '/js/main.js',
     ];
     /**
      * @var array Las dependencias del asset.

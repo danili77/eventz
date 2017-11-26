@@ -4,7 +4,8 @@ create table usuarios(
     id       bigserial   constraint pk_usuarios primary key,
     nombre   varchar(15) not null constraint uq_usuarios_nombre unique,
     password varchar(60) not null,
-    token varchar(32)
+    token varchar(32),
+    created_at timestamptz default current_timestamp
 );
 
 drop table if exists tipo_evento cascade;
@@ -20,7 +21,7 @@ create table eventos(
     id              bigserial    constraint pk_eventos primary key,
     nombre          varchar(100) not null,
     descripcion     text         not null,
-    fecha           timestamptz  not null default current_timestamp,
+    fecha           date  not null default current_timestamp,
     lugar           varchar(300) not null,
     tipo_evento     bigint       not null constraint fk_eventos_tipo_evento
                                  references tipo_evento(id) on delete cascade

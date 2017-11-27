@@ -1,41 +1,41 @@
 #contenido {
-    display: flex;
-    flex-direction: row;
-    width: 75%;
-    margin: auto;
-    font-size: 15px;
-    text-align: justify;
+  display: flex;
+  flex-direction: row;
+  width: 75%;
+  margin: auto;
+  font-size: 15px;
+  text-align: justify;
 }
 
 h1, h2 {
-    color: #003366;
-    font-weight: bold;
+  color: #003366;
+  font-weight: bold;
 }
 
 section {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 section div{
-    display: flex;
-    flex-direction:row;
-    justify-content: space-between;
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
 }
 
 article {
 
-    width: 45%;
+  width: 45%;
 }
 
 video {
-    width: 100%;
+  width: 100%;
 }
 
 .jR3DCarouselGallery
 {
-    margin-left:170px;
-    margin-bottom:30px;
+  margin-left:170px;
+  margin-bottom:30px;
 }
 
 .jR3DCarouselGallery img

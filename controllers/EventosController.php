@@ -6,9 +6,11 @@ use Yii;
 use app\models\Evento;
 use app\models\Comentario;
 use app\models\EventoSearch;
+use app\models\TipoEvento;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+
 
 /**
 * EventosController implements the CRUD actions for Evento model.
@@ -36,27 +38,39 @@ class EventosController extends Controller
   */
   public function actionIndex()
   {
-
-    $events = Evento::find()->all();
-
-    $tasks = [];
-    foreach ($events as $eve)
-    {
-      $event = new \yii2fullcalendar\models\Event();
-      $event->id = $eve->id;
-      $event->title = $eve->nombre;
-      $event->start = $eve->fecha;
-      $tasks[] = $event;
-    }
+    //$tipos = TipoEvento::find()->select('tipo, id')->orderBy('tipo')->indexBy('id')->column();
 
     $searchModel = new EventoSearch();
     $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
     return $this->render('index', [
-      'events' => $tasks,
       'searchModel' => $searchModel,
       'dataProvider' => $dataProvider,
     ]);
+  }
+
+  public function actionCalendario()
+  {
+      $events = Evento::find()->all();
+
+      $tasks = [];
+      foreach ($events as $eve)
+      {
+        $event = new \yii2fullcalendar\models\Event();
+        $event->id = $eve->id;
+        $event->title = $eve->nombre;
+        $event->start = $eve->fecha;
+        $tasks[] = $event;
+      }
+
+      $searchModel = new EventoSearch();
+      $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+      return $this->render('calendario', [
+        'events' => $tasks,
+        'searchModel' => $searchModel,
+        'dataProvider' => $dataProvider,
+      ]);
   }
 
   /**
@@ -93,15 +107,17 @@ class EventosController extends Controller
   * If creation is successful, the browser will be redirected to the 'view' page.
   * @return mixed
   */
-  public function actionCreate($date)
+  public function actionCreate()
   {
     $model = new Evento();
-    $model->fecha = $date;
+  //  $model->fecha = $date;
 
     if ($model->load(Yii::$app->request->post()) && $model->save()) {
       return $this->redirect(['view', 'id' => $model->id]);
     } else {
-      return $this->renderAjax('create', [
+      //$tipos = TipoEvento::find()->select('tipo, id')->orderBy('tipo')->indexBy('id')->column();
+      return $this->render('create', [
+        //'tipos' => $tipos,
         'model' => $model,
       ]);
     }

@@ -2,7 +2,8 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
-use app\assets\IndexAsset;
+use app\assets\EventoAsset;
+use app\assets\AppAsset;
 use app\models\Evento;
 use yii\bootstrap\Modal;
 
@@ -10,7 +11,8 @@ use yii\bootstrap\Modal;
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\EventoSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
-IndexAsset::register($this);
+//EventoAsset::register($this);
+AppAsset::register($this);
 
 $this->title = 'Eventos';
 $this->params['breadcrumbs'][] = $this->title;
@@ -32,7 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <p>
         <?= Html::a('Crear Evento', ['create'], ['class' => 'btn btn-success']) ?>
-        <?= Html::a('Calendario', ['/eventos/calendario'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Calendario', ['calendario'], ['class' => 'btn btn-success']) ?>
         <?= Html::a('Convertir a PDF', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <?= GridView::widget([
@@ -51,7 +53,5 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
-    <?= \yii2fullcalendar\yii2fullcalendar::widget(array(
-      'events'=> $events,
-  ));?>
+
 </div>

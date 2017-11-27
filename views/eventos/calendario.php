@@ -16,13 +16,11 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="evento-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h1>Calendario de <?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
         <?= Html::a('Crear Evento', ['create'], ['class' => 'btn btn-success']) ?>
-        <?= Html::a('Calendario', ['index'], ['class' => 'btn btn-success']) ?>
-        <?= Html::a('Convertir a PDF', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= \yii2fullcalendar\yii2fullcalendar::widget(array(

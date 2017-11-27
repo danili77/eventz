@@ -17,3 +17,37 @@ table a:nth-child(1),table a:nth-child(2),table a:nth-child(3)
     margin:2px;
     width:100px;
 }
+
+*
+{
+  font-family: 'Orbitron', sans-serif;
+  font-size:14px;
+}
+
+nav#w0
+{
+  background-color: #003366;
+}
+
+#w0 p
+{
+  font-size: 23px;
+  font-weight:bold;
+}
+
+#w0 li a
+{
+  font-size:13px;
+}
+
+#w0 img
+{
+  -webkit-animation:spin 4s linear 2s;
+  -moz-animation:spin 4s linear 2s infinite;
+  animation:spin 4s linear 2s infinite;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotateY(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotateY(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotateX(360deg); transform:rotateY(360deg); } }
+--

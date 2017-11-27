@@ -3,7 +3,8 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\jui\DatePicker;
-use app\models\TipoEvento;
+use \app\models\TipoEvento;
+
 
 $tipos = TipoEvento::find()->select('tipo, id')->orderBy('tipo')->indexBy('id')->column();
 

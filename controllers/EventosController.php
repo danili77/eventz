@@ -7,6 +7,7 @@ use app\models\Evento;
 use app\models\Comentario;
 use app\models\EventoSearch;
 use app\models\TipoEvento;
+use app\models\Usuario;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -38,12 +39,13 @@ class EventosController extends Controller
   */
   public function actionIndex()
   {
-    //$tipos = TipoEvento::find()->select('tipo, id')->orderBy('tipo')->indexBy('id')->column();
+    $tipos = TipoEvento::find()->select('tipo, id')->orderBy('tipo')->indexBy('id')->column();
 
     $searchModel = new EventoSearch();
     $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
     return $this->render('index', [
+      'tipos' => $tipos,
       'searchModel' => $searchModel,
       'dataProvider' => $dataProvider,
     ]);
@@ -112,16 +114,23 @@ class EventosController extends Controller
     $model = new Evento();
   //  $model->fecha = $date;
 
-    if ($model->load(Yii::$app->request->post()) && $model->save()) {
-      return $this->redirect(['view', 'id' => $model->id]);
-    } else {
-      //$tipos = TipoEvento::find()->select('tipo, id')->orderBy('tipo')->indexBy('id')->column();
-      return $this->render('create', [
-        //'tipos' => $tipos,
-        'model' => $model,
-      ]);
+
+      if ($model->load(Yii::$app->request->post())) {
+          $model->usuarios_id = Yii::$app->user->id;
+          if ($model->save()) {
+              return $this->redirect(['view', 'id' => $model->id]);
+          }
+      } else {
+          $tipos = TipoEvento::find()->select('tipo, id')->orderBy('tipo')->indexBy('id')->column();
+          //$usuarios = Usuario::find()->select('nombre, id')->orderBy('nombre')->indexBy('id')->column();
+          return $this->render('create', [
+                  'model' => $model,
+                  'tipos' => $tipos,
+                  //'usuarios' =>$usuarios,
+              ]);
+      }
     }
-  }
+
 
   /**
   * Updates an existing Evento model.
@@ -131,15 +140,18 @@ class EventosController extends Controller
   */
   public function actionUpdate($id)
   {
+
     $model = $this->findModel($id);
 
     if ($model->load(Yii::$app->request->post()) && $model->save()) {
-      return $this->redirect(['view', 'id' => $model->id]);
-    } else {
-      return $this->render('update', [
+    return $this->redirect(['view', 'id' => $model->id]);
+} else {
+    $tipos = TipoEvento::find()->select('tipo, id')->orderBy('tipo')->indexBy('id')->column();
+    return $this->render('update', [
         'model' => $model,
-      ]);
-    }
+        'tipos' => $tipos,
+    ]);
+}
   }
 
   /**

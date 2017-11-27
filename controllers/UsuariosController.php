@@ -66,6 +66,12 @@ class UsuariosController extends Controller
         $model = new Usuario();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            if (Yii::$app->user->isGuest) {
+                Yii::$app->session->setFlash(
+                    'exito',
+                    'Usuario creado correctamente.'
+                );
+            }
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [

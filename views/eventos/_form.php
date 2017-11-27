@@ -6,7 +6,7 @@ use yii\jui\DatePicker;
 use \app\models\TipoEvento;
 
 
-$tipos = TipoEvento::find()->select('tipo, id')->orderBy('tipo')->indexBy('id')->column();
+//$tipos = TipoEvento::find()->select('tipo, id')->orderBy('tipo')->indexBy('id')->column();
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Evento */
@@ -30,7 +30,7 @@ $tipos = TipoEvento::find()->select('tipo, id')->orderBy('tipo')->indexBy('id')-
 
     <?= $form->field($model, 'tipo_evento')->textInput()->dropDownList($tipos) ?>
 
-    <?= $form->field($model, 'usuarios_id')->textInput() ?>
+    <?= $form->field($model, 'usuarios_id')->textInput() ?> 
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Crear' : 'Modificar', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

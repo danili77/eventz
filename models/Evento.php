@@ -20,7 +20,6 @@ use Yii;
  */
 class Evento extends \yii\db\ActiveRecord
 {
-    public $tipos;
     /**
      * @inheritdoc
      */

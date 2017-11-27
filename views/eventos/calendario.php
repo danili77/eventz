@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="evento-index">
 
-    <h1>Calendario de <?= Html::encode($this->title) ?></h1>
+    <h2>Calendario de <?= Html::encode($this->title) ?></h2>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>

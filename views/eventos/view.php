@@ -12,7 +12,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="evento-view">
 
-    <h1>Evento: <?= Html::encode($model->nombre) ?></h1>
+    <h2>Evento: <?= Html::encode($model->nombre) ?></h2>
 
     <p>
         <?= Html::a('Modificar', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
@@ -23,6 +23,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'method' => 'post',
             ],
         ]) ?>
+        <?= Html::a('Pasar a PDF', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= DetailView::widget([
@@ -38,7 +39,7 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]) ?>
 
-    <h3>Comentarios (<?= $numComentarios; ?>)</h3><br><br>
+    <h2>Comentarios (<?= $numComentarios; ?>)</h2><br><br>
     <!-- Html::a('Profile', ['user/view', 'id' => $id], ['class' => 'profile-link'])  -->
     <?= Html::a(
       'Comentar',

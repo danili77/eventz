@@ -2,7 +2,6 @@
 
 use yii\helpers\Html;
 use app\assets\EventoAsset;
-use app\assets\AppAsset;
 use app\models\Evento;
 use yii\bootstrap\Modal;
 use kartik\grid\GridView;
@@ -12,8 +11,8 @@ use kartik\date\DatePicker;
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\EventoSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
+
 EventoAsset::register($this);
-AppAsset::register($this);
 
 $this->title = 'Eventos';
 $this->params['breadcrumbs'][] = $this->title;

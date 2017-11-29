@@ -139,18 +139,19 @@ nav#w0,nav#w1,nav#w4
 {
   font-size:12px;
   color:white;
+  font-weight: bold;
 }
 
-#w0 img, #w1 img,#w4 img
+#w0 img,#w1 img,#w4 img
 {
-  -webkit-animation:spin 4s linear 2s;
-  -moz-animation:spin 4s linear 2s infinite;
-  animation:spin 4s linear 2s infinite;
+ -webkit-animation:spin 4s linear 2s;
+ -moz-animation:spin 4s linear 2s infinite;
+ animation:spin 4s linear 2s infinite;
 }
 
 @-moz-keyframes spin { 100% { -moz-transform: rotateY(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotateY(360deg); } }
-@keyframes spin { 100% { -webkit-transform: rotateX(360deg); transform:rotateY(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotateY(360deg); transform:rotateY(360deg); } }
 
 h1, h2 {
     color: #003366;

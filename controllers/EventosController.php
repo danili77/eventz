@@ -11,6 +11,8 @@ use app\models\Usuario;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use kartik\mpdf\Pdf;
+use yii\helpers\ArrayHelper;
 
 
 /**
@@ -40,6 +42,8 @@ class EventosController extends Controller
   public function actionIndex()
   {
     $tipos = TipoEvento::find()->select('tipo, id')->orderBy('tipo')->indexBy('id')->column();
+    $usuarios = Usuario::find()->asArray()->all();
+    $usuarios = ArrayHelper::map($usuarios, 'id', 'id');
 
     $searchModel = new EventoSearch();
     $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
@@ -48,6 +52,7 @@ class EventosController extends Controller
       'tipos' => $tipos,
       'searchModel' => $searchModel,
       'dataProvider' => $dataProvider,
+      'usuarios' => $usuarios
     ]);
   }
 
@@ -122,7 +127,7 @@ class EventosController extends Controller
           }
       } else {
           $tipos = TipoEvento::find()->select('tipo, id')->orderBy('tipo')->indexBy('id')->column();
-          //$usuarios = Usuario::find()->select('nombre, id')->orderBy('nombre')->indexBy('id')->column();
+          //$usuarios = Usuario::find('id=$model->id')->select('nombre, id')->orderBy('nombre')->indexBy('id')->column();
           return $this->render('create', [
                   'model' => $model,
                   'tipos' => $tipos,

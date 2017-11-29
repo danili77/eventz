@@ -23,7 +23,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 'method' => 'post',
             ],
         ]) ?>
-        <?= Html::a('Pasar a PDF', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Pasar a PDF', ['pdf'], ['class' => 'btn btn-primary']) ?>
+
     </p>
 
     <?= DetailView::widget([

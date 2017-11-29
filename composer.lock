@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "e4bc50a583ff8d3025e9dd5a87daaa8e",
+    "content-hash": "27cf5ceadc727b558f9781a8a3d3e0bf",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -279,16 +279,16 @@
         },
         {
             "name": "bower-asset/moment",
-            "version": "2.19.2",
+            "version": "2.19.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/moment/moment.git",
-                "reference": "328d51e7235b7a2d443bfdf69c1844939c115660"
+                "reference": "4caa268356434f3ae9b5041985d62a0e8c246c78"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/moment/moment/zipball/328d51e7235b7a2d443bfdf69c1844939c115660",
-                "reference": "328d51e7235b7a2d443bfdf69c1844939c115660",
+                "url": "https://api.github.com/repos/moment/moment/zipball/4caa268356434f3ae9b5041985d62a0e8c246c78",
+                "reference": "4caa268356434f3ae9b5041985d62a0e8c246c78",
                 "shasum": ""
             },
             "type": "bower-asset-library",
@@ -319,7 +319,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2017-11-11T20:25:07+00:00"
+            "time": "2017-11-29T16:10:14+00:00"
         },
         {
             "name": "bower-asset/punycode",

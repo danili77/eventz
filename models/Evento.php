@@ -57,7 +57,7 @@ class Evento extends \yii\db\ActiveRecord
             'fecha' => 'Fecha',
             'lugar' => 'Lugar',
             'tipo_evento' => 'Tipo de evento',
-            'usuarios_id' => 'Usuario',
+            'usuarios_id' => 'Usuario creador',
         ];
     }
 

@@ -23,14 +23,13 @@ $this->params['breadcrumbs'][] = $this->title;
                 'method' => 'post',
             ],
         ]) ?>
-        <?= Html::a('Pasar a PDF', ['pdf'], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Pasar a PDF', ['gen-pdf','id' => $model->id], ['class' => 'btn btn-primary']) ?>
 
     </p>
 
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'id',
             'nombre',
             'descripcion:ntext',
             'fecha:datetime',

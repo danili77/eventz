@@ -28,7 +28,7 @@
         "kartik-v/yii2-widget-datepicker": "@dev",
         "yiisoft/yii2-jui": "^2.0",
         "kartik-v/yii2-widget-select2": "@dev",
-        "mpdf/mpdf":"*"
+        "mpdf/mpdf":"^7.0"
 
     },
     "require-dev": {

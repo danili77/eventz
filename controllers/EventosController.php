@@ -11,8 +11,8 @@ use app\models\Usuario;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use kartik\mpdf\Pdf;
 use yii\helpers\ArrayHelper;
+use mPDF;
 
 
 /**
@@ -58,26 +58,26 @@ class EventosController extends Controller
 
   public function actionCalendario()
   {
-      $events = Evento::find()->all();
+    $events = Evento::find()->all();
 
-      $tasks = [];
-      foreach ($events as $eve)
-      {
-        $event = new \yii2fullcalendar\models\Event();
-        $event->id = $eve->id;
-        $event->title = $eve->nombre;
-        $event->start = $eve->fecha;
-        $tasks[] = $event;
-      }
+    $tasks = [];
+    foreach ($events as $eve)
+    {
+      $event = new \yii2fullcalendar\models\Event();
+      $event->id = $eve->id;
+      $event->title = $eve->nombre;
+      $event->start = $eve->fecha;
+      $tasks[] = $event;
+    }
 
-      $searchModel = new EventoSearch();
-      $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+    $searchModel = new EventoSearch();
+    $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
-      return $this->render('calendario', [
-        'events' => $tasks,
-        'searchModel' => $searchModel,
-        'dataProvider' => $dataProvider,
-      ]);
+    return $this->render('calendario', [
+      'events' => $tasks,
+      'searchModel' => $searchModel,
+      'dataProvider' => $dataProvider,
+    ]);
   }
 
   /**
@@ -117,24 +117,24 @@ class EventosController extends Controller
   public function actionCreate()
   {
     $model = new Evento();
-  //  $model->fecha = $date;
+    //  $model->fecha = $date;
 
 
-      if ($model->load(Yii::$app->request->post())) {
-          $model->usuarios_id = Yii::$app->user->id;
-          if ($model->save()) {
-              return $this->redirect(['view', 'id' => $model->id]);
-          }
-      } else {
-          $tipos = TipoEvento::find()->select('tipo, id')->orderBy('tipo')->indexBy('id')->column();
-          //$usuarios = Usuario::find('id=$model->id')->select('nombre, id')->orderBy('nombre')->indexBy('id')->column();
-          return $this->render('create', [
-                  'model' => $model,
-                  'tipos' => $tipos,
-                  //'usuarios' =>$usuarios,
-              ]);
+    if ($model->load(Yii::$app->request->post())) {
+      $model->usuarios_id = Yii::$app->user->id;
+      if ($model->save()) {
+        return $this->redirect(['view', 'id' => $model->id]);
       }
+    } else {
+      $tipos = TipoEvento::find()->select('tipo, id')->orderBy('tipo')->indexBy('id')->column();
+      //$usuarios = Usuario::find('id=$model->id')->select('nombre, id')->orderBy('nombre')->indexBy('id')->column();
+      return $this->render('create', [
+        'model' => $model,
+        'tipos' => $tipos,
+        //'usuarios' =>$usuarios,
+      ]);
     }
+  }
 
 
   /**
@@ -149,14 +149,14 @@ class EventosController extends Controller
     $model = $this->findModel($id);
 
     if ($model->load(Yii::$app->request->post()) && $model->save()) {
-    return $this->redirect(['view', 'id' => $model->id]);
-} else {
-    $tipos = TipoEvento::find()->select('tipo, id')->orderBy('tipo')->indexBy('id')->column();
-    return $this->render('update', [
+      return $this->redirect(['view', 'id' => $model->id]);
+    } else {
+      $tipos = TipoEvento::find()->select('tipo, id')->orderBy('tipo')->indexBy('id')->column();
+      return $this->render('update', [
         'model' => $model,
         'tipos' => $tipos,
-    ]);
-}
+      ]);
+    }
   }
 
   /**
@@ -170,6 +170,21 @@ class EventosController extends Controller
     $this->findModel($id)->delete();
 
     return $this->redirect(['index']);
+  }
+
+  public function actionGenPdf($id)
+  {
+    $pdf_contenido = $this->renderPartial('view-pdf',[
+      'model' => $this->findModel($id),
+    ]);
+
+    $mpdf = new \Mpdf\Mpdf();
+    $css = file_get_contents(Yii::getAlias('@app/web/css/pdf.css'));
+    $mpdf->WriteHTML($css, 1);
+    $mpdf->writeHTML("<h1><img src='../web/imagenes/logoPdf.png'>Eventz</h1>");
+    $mpdf->writeHTML($pdf_contenido);
+    $mpdf->OutPut();
+    exit;
   }
 
   /**

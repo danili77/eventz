@@ -123,25 +123,25 @@ a.desc:after {
   font-size:14px;
 }
 
-nav#w0,nav#w1
+nav#w0,nav#w1,nav#w4
 {
   background-color: #003366;
 }
 
-#w0 p,#w1 p
+#w0 p,#w1 p,#w4 p
 {
   font-size: 25px;
   font-weight:bold;
   color:white;
 }
 
-#w0 li a,#w1 li a
+#w0 li a,#w1 li a,#w4 li a
 {
   font-size:12px;
   color:white;
 }
 
-#w0 img, #w1 img
+#w0 img, #w1 img,#w4 img
 {
   -webkit-animation:spin 4s linear 2s;
   -moz-animation:spin 4s linear 2s infinite;
@@ -156,4 +156,3 @@ h1, h2 {
     color: #003366;
     font-weight: bold;
 }
---

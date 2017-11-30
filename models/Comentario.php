@@ -5,7 +5,7 @@ namespace app\models;
 use Yii;
 
 /**
- * This is the model class for table "comentarios".
+ * Este es el modelo para la tabla "comentarios".
  *
  * @property integer $id
  * @property string $texto_comentario
@@ -18,7 +18,8 @@ use Yii;
 class Comentario extends \yii\db\ActiveRecord
 {
     /**
-     * @inheritdoc
+     * Declara el nombre de la tabla de la base de datos asociada con esta clase.
+     * @return string El nombre de la tabla.
      */
     public static function tableName()
     {
@@ -26,7 +27,8 @@ class Comentario extends \yii\db\ActiveRecord
     }
 
     /**
-     * @inheritdoc
+     * Devuelve las reglas de validación de los atributos.
+     * @return array Las reglas de validación.
      */
     public function rules()
     {
@@ -40,7 +42,8 @@ class Comentario extends \yii\db\ActiveRecord
     }
 
     /**
-     * @inheritdoc
+     * Devuelve las etiquetas de los atributos.
+     * @return array Las etiquetas de los atributos.
      */
     public function attributeLabels()
     {

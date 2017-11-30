@@ -10,10 +10,14 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 
+/**
+ * SiteController implementa las acciones basicas del sitio.
+ */
 class SiteController extends Controller
 {
     /**
-     * @inheritdoc
+     * Devuelve un listado con los comportamientos del componente.
+     * @return mixed
      */
     public function behaviors()
     {
@@ -39,7 +43,8 @@ class SiteController extends Controller
     }
 
     /**
-     * @inheritdoc
+     * Devuelve parametros de configuración
+     * @return mixed
      */
     public function actions()
     {
@@ -55,7 +60,7 @@ class SiteController extends Controller
     }
 
     /**
-     * Displays homepage.
+     * Muestra la pagina principal
      *
      * @return string
      */
@@ -65,9 +70,9 @@ class SiteController extends Controller
     }
 
     /**
-     * Login action.
+     * Permite realizar la acción de login.
      *
-     * @return Response|string
+     * @return string
      */
     public function actionLogin()
     {
@@ -85,9 +90,9 @@ class SiteController extends Controller
     }
 
     /**
-     * Logout action.
+     * Permite realizar la accion de logout.
      *
-     * @return Response
+     * @return string
      */
     public function actionLogout()
     {
@@ -97,9 +102,9 @@ class SiteController extends Controller
     }
 
     /**
-     * Displays contact page.
+     * Muestra la pagina de contacto.
      *
-     * @return Response|string
+     * @return string
      */
     public function actionContact()
     {
@@ -115,7 +120,7 @@ class SiteController extends Controller
     }
 
     /**
-     * Displays about page.
+     * Muestra la pagina Acerca de...
      *
      * @return string
      */

@@ -16,13 +16,14 @@ use mPDF;
 
 
 /**
-* EventosController implements the CRUD actions for Evento model.
+* EventosController implementa las acciones CRUD para el modelo de Evento.
 */
 class EventosController extends Controller
 {
   /**
-  * @inheritdoc
-  */
+   * Devuelve un listado con los comportamientos del componente.
+   * @return mixed
+   */
   public function behaviors()
   {
     return [
@@ -36,7 +37,7 @@ class EventosController extends Controller
   }
 
   /**
-  * Lists all Evento models.
+  * Lista todos los eventos.
   * @return mixed
   */
   public function actionIndex()
@@ -56,6 +57,10 @@ class EventosController extends Controller
     ]);
   }
 
+/**
+ * Crea un Calendario donde los eventos estan marcados.
+ * @return void
+ */
   public function actionCalendario()
   {
     $events = Evento::find()->all();
@@ -81,8 +86,8 @@ class EventosController extends Controller
   }
 
   /**
-  * Displays a single Evento model.
-  * @param integer $id
+  * Muestra los datos de un solo evento.
+  * @param integer $id El id del evento que se quiere mostrar.
   * @return mixed
   */
   public function actionView($id)
@@ -110,8 +115,8 @@ class EventosController extends Controller
   }
 
   /**
-  * Creates a new Evento model.
-  * If creation is successful, the browser will be redirected to the 'view' page.
+  * Crea un nuevo evento.
+  * Si el evento se ha creado con exito, el navegador se redireccionara a la vista del evento.
   * @return mixed
   */
   public function actionCreate()
@@ -138,9 +143,10 @@ class EventosController extends Controller
 
 
   /**
-  * Updates an existing Evento model.
-  * If update is successful, the browser will be redirected to the 'view' page.
-  * @param integer $id
+  * Modifica los datos de un evento existente.
+  * Si la modificación se a realizado con exito, el navegador se redireccionará
+  * a la vista del evento modificado.
+  * @param int $id El id del evento que se quiere modificar.
   * @return mixed
   */
   public function actionUpdate($id)
@@ -160,9 +166,10 @@ class EventosController extends Controller
   }
 
   /**
-  * Deletes an existing Evento model.
-  * If deletion is successful, the browser will be redirected to the 'index' page.
-  * @param integer $id
+  * Elimina un evento existente.
+  * Si se ha borrado con exito, el navegador se redireccionara a la pagina
+  * indice de los eventos.
+  * @param int $id El id del evento que se quiere eliminar.
   * @return mixed
   */
   public function actionDelete($id)
@@ -172,6 +179,11 @@ class EventosController extends Controller
     return $this->redirect(['index']);
   }
 
+  /**
+   * Crea y descarga un documento pdf con el evento indicado.
+   * @param int $id El id del evento.
+   * @return void
+   */
   public function actionGenPdf($id)
   {
     $pdf_contenido = $this->renderPartial('view-pdf',[
@@ -188,18 +200,18 @@ class EventosController extends Controller
   }
 
   /**
-  * Finds the Evento model based on its primary key value.
-  * If the model is not found, a 404 HTTP exception will be thrown.
-  * @param integer $id
-  * @return Evento the loaded model
-  * @throws NotFoundHttpException if the model cannot be found
+  * Encuentra un evento buscando por su clave primaria(id).
+  * Si el evento no se enecuentra,se lanzara una excepción 404 HTTP.
+  * @param int $id El id del evento que se quiere buscar.
+  * @return Evento El evento cargado
+  * @throws NotFoundHttpException Si el evento no se ha encontrado
   */
   protected function findModel($id)
   {
     if (($model = Evento::findOne($id)) !== null) {
       return $model;
     } else {
-      throw new NotFoundHttpException('The requested page does not exist.');
+      throw new NotFoundHttpException('La pagina solicitada no existe.');
     }
   }
 }

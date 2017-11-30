@@ -10,12 +10,13 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * ComentariosController implements the CRUD actions for Comentario model.
+ * ComentariosController implementa las acciones CRUD para el modelo Comentario.
  */
 class ComentariosController extends Controller
 {
     /**
-     * @inheritdoc
+     * Devuelve un listado con los comportamientos del componente.
+     * @return mixed
      */
     public function behaviors()
     {
@@ -30,7 +31,7 @@ class ComentariosController extends Controller
     }
 
     /**
-     * Lists all Comentario models.
+     * Lista todos los comentarios.
      * @return mixed
      */
     public function actionIndex()
@@ -45,8 +46,8 @@ class ComentariosController extends Controller
     }
 
     /**
-     * Displays a single Comentario model.
-     * @param integer $id
+     * Muestra los datos de un comentario.
+     * @param int $id El id del comentario que se quiere mostrar.
      * @return mixed
      */
     public function actionView($id)
@@ -57,8 +58,9 @@ class ComentariosController extends Controller
     }
 
     /**
-     * Creates a new Comentario model.
-     * If creation is successful, the browser will be redirected to the 'view' page.
+     * Crea un nuevo comentario.
+     * Si el comentario se ha creado con exito, el navegador redireccionara a
+     * la vista del comentario.
      * @return mixed
      */
     public function actionCreate()
@@ -75,9 +77,10 @@ class ComentariosController extends Controller
     }
 
     /**
-     * Updates an existing Comentario model.
-     * If update is successful, the browser will be redirected to the 'view' page.
-     * @param integer $id
+     * Modifica los datos de un comentario existente.
+     * Si la modificación se ha realizado con exito, el navegador redireccionara
+     * a la vista del comentario modificado.
+     * @param int $id El id del evento que se quiere modificar.
      * @return mixed
      */
     public function actionUpdate($id)
@@ -94,9 +97,10 @@ class ComentariosController extends Controller
     }
 
     /**
-     * Deletes an existing Comentario model.
-     * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param integer $id
+     * Elimina un comentario existente.
+     * Si se ha eliminado con exito, el navegador redireccionara a la pagina
+     * indice de los comentarios.
+     * @param int $id El id del comentario que se quiere eliminar.
      * @return mixed
      */
     public function actionDelete($id)
@@ -107,11 +111,11 @@ class ComentariosController extends Controller
     }
 
     /**
-     * Finds the Comentario model based on its primary key value.
-     * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param integer $id
-     * @return Comentario the loaded model
-     * @throws NotFoundHttpException if the model cannot be found
+     * Encuentra un comentario buscando por su clave primaria(id).
+     * Si el comentario no se enecuentra,se lanzara una excepcion 404 HTTP.
+     * @param int $id El id del comentario que se quiere buscar.
+     * @return Comentario El evento cargado.
+     * @throws NotFoundHttpException Si el comentario no se ha encontrado.
      */
     protected function findModel($id)
     {

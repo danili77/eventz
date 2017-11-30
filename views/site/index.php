@@ -7,7 +7,7 @@ use yii\helpers\Html;
 
 IndexAsset::register($this);
 
-$this->title = 'Eventz';
+$this->title = 'Inicio';
 ?>
 <div class="site-index">
     <div class="body-content">

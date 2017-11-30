@@ -14,7 +14,7 @@ use kartik\date\DatePicker;
 
 EventoAsset::register($this);
 
-$this->title = 'Eventos';
+$this->title = 'Eventz';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="evento-index">

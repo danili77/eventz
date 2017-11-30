@@ -25,3 +25,8 @@ table th
   background-color:#003366;
   color:white;
 }
+
+table td
+{
+  text-align:justify;
+}

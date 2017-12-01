@@ -41,6 +41,7 @@ AppAsset::register($this);
             ['label' => 'Eventz', 'url' => ['/eventos/index']],
             ['label' => 'Contacto', 'url' => ['/site/contact']],
             ['label' => 'Registro', 'url' => ['/usuarios/create']],
+
             Yii::$app->user->isGuest ? (
                 ['label' => 'Login', 'url' => ['/site/login']]
             ) : (
@@ -68,9 +69,10 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; Eventz <?= date('Y') ?></p>
+        <p class="pull-left">&copy; Eventz <?= date('Y') ?>/Dani L.I</p>
 
-        <p class="pull-right"><?= "Desarrollado por: Daniel Lorenzo Ibañez" ?></p>
+        <p class="pull-right"><button id="botonR">Player</button></p>
+
     </div>
 </footer>
 

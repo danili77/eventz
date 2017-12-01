@@ -22,6 +22,8 @@ class AppAsset extends AssetBundle
     ];
     public $js = [
         '/js/main.js',
+        '/js/ventanaReproductor.js',
+
 
     ];
     public $depends = [

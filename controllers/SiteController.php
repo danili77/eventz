@@ -121,6 +121,11 @@ class SiteController extends Controller
         ]);
     }
 
+    public function actionReproductor()
+    {
+        return $this->render('reproductor');
+    }
+
     /**
      * Muestra la pagina Acerca de...
      *

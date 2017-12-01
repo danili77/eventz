@@ -16,9 +16,9 @@ body {
 
 .footer {
     color:white;
-    height: 60px;
+    height: 70px;
     background-color: #003366;
-    border-top: 1px solid #ddd;
+    border-top: 3px solid black;
     padding-top: 20px;
 }
 
@@ -126,6 +126,7 @@ a.desc:after {
 nav#w0,nav#w1,nav#w4
 {
   background-color: #003366;
+  border-bottom: 3px solid black;
 }
 
 #w0 p,#w1 p,#w4 p
@@ -156,4 +157,9 @@ nav#w0,nav#w1,nav#w4
 h1, h2 {
     color: #003366;
     font-weight: bold;
+}
+
+#botonR
+{
+  color:black;
 }

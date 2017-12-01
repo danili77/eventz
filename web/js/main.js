@@ -4,7 +4,9 @@ $(function(){
     var date=$(this).attr('data-date');
 
     $.get('index.php?r=eventos/create',{'date':date},function(data){
-      $('#modal').modal('show').find('#modalContent').load(data);
+      $('#modal').modal('show')
+      .find('#modalContent')
+      .load(data);
     });
   });
 
@@ -13,4 +15,5 @@ $(function(){
     .find('#modalContent')
     .load($(this).attr('value'));
   });
+  
 });

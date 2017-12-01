@@ -34,7 +34,7 @@ AppAsset::register($this);
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
-    echo Nav::widget([
+    /*echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
             ['label' => 'Inicio', 'url' => ['/site/index']],
@@ -55,6 +55,45 @@ AppAsset::register($this);
                 . '</li>'
             ),
         ],
+    ]);*/
+
+    $items = [
+        ['label' => 'Inicio', 'url' => ['/site/index']],
+        ['label' => 'Eventz', 'url' => ['/eventos/index']],
+        ['label' => 'Contacto', 'url' => ['/site/contact']],
+        Yii::$app->user->isGuest ?
+        [
+            'label' => 'Usuarios',
+            'items' => [
+                ['label' => 'Login', 'url' => ['/site/login']],
+                '<li class="divider"></li>',
+                ['label' => 'Registro', 'url' => ['usuarios/create']],
+            ]
+        ] :
+        [
+            'label' => 'Usuario (' . Html::encode(Yii::$app->user->identity->nombre) . ')',
+            'items' => [
+                [
+                    'label' => 'Logout',
+                    'url' => ['site/logout'],
+                    'linkOptions' => ['data-method' => 'POST']
+                ],
+                '<li class="divider"></li>',
+                ['label' => 'Mis datos', 'url' => ['/usuarios/view', 'id' => Html::encode(Yii::$app->user->id)]],
+            ]
+        ]
+    ];
+
+    if (Yii::$app->user->esAdmin) {
+        end($items);
+        $items[key($items)]['items'][] = [
+            'label' => 'Gestión de usuarios',
+            'url' => ['usuarios/index']
+        ];
+    }
+    echo Nav::widget([
+        'options' => ['class' => 'navbar-nav navbar-right no-hover'],
+        'items' => $items,
     ]);
     NavBar::end();
     ?>

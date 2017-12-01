@@ -43,7 +43,6 @@ class UsuarioSearch extends Usuario
     {
         $query = Usuario::find();
 
-        // add conditions that should always apply here
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
@@ -52,8 +51,6 @@ class UsuarioSearch extends Usuario
         $this->load($params);
 
         if (!$this->validate()) {
-            // uncomment the following line if you do not want to return any records when validation fails
-            // $query->where('0=1');
             return $dataProvider;
         }
 
@@ -63,7 +60,8 @@ class UsuarioSearch extends Usuario
         ]);
 
         $query->andFilterWhere(['like', 'nombre', $this->nombre])
-            ->andFilterWhere(['like', 'password', $this->password]);
+              ->andFilterWhere(['like', 'password', $this->password])
+              ->andFilterWhere(['like', 'email', $this->email]);
 
         return $dataProvider;
     }

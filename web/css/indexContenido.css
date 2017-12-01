@@ -44,7 +44,12 @@ video {
   border-radius: 20px;
 }
 
-ul li
+.site-index ul li
 {
   list-style-image: url("/imagenes/logoLista.ico");
+}
+
+ul li
+{
+  color:black;
 }

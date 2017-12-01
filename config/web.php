@@ -23,6 +23,7 @@ $config = [
             'enablePrettyUrl' => true,
         ],
         'user' => [
+            'class' =>'app\components\User',
             'identityClass' => 'app\models\Usuario',
             'enableAutoLogin' => true,
         ],

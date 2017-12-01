@@ -133,15 +133,14 @@ nav#w0,nav#w1,nav#w4
 {
   font-size: 25px;
   font-weight:bold;
-  color:white;
 }
 
 #w0 li a,#w1 li a,#w4 li a
 {
   font-size:12px;
-  color:white;
   font-weight: bold;
 }
+
 
 #w0 img,#w1 img,#w4 img
 {

@@ -9,6 +9,8 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\RecuperarForm;
+use app\models\Usuario;
 
 /**
  * SiteController implementa las acciones basicas del sitio.

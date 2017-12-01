@@ -11,6 +11,8 @@ use yii\web\IdentityInterface;
 * @property integer $id
 * @property string $nombre
 * @property string $password
+*  @property string $email
+* @property string $token
 * @property string $created_at
 */
 class Usuario extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
@@ -39,12 +41,13 @@ class Usuario extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
   public function rules()
   {
     return [
-      [['nombre', 'password'], 'required'],
+      [['nombre', 'password','email'], 'required'],
       [['created_at'], 'safe'],
       [['nombre'], 'string', 'max' => 15],
       [['password'], 'string', 'max' => 60],
       [['nombre'], 'unique'],
-      [['token'], 'string', 'max' => 32]
+      [['token'], 'string', 'max' => 32],
+      [['email'], 'string', 'max' => 255],
     ];
   }
 
@@ -60,7 +63,8 @@ class Usuario extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
       'password' => 'Contraseña',
       'passwordConfirm' =>'Confirmar Contraseña',
       'created_at' => 'Fecha Creación',
-      'token' =>'Token'
+      'token' =>'Token',
+      'email' => 'Email',
     ];
   }
 

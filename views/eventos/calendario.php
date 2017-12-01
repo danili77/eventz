@@ -2,14 +2,13 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
-use app\assets\AppAsset;
+use yii\bootstrap\Modal;
 use app\models\Evento;
-
 
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\EventoSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
-AppAsset::register($this);
+
 
 $this->title = 'Eventos';
 $this->params['breadcrumbs'][] = $this->title;
@@ -19,9 +18,16 @@ $this->params['breadcrumbs'][] = $this->title;
     <h2>Calendario de <?= Html::encode($this->title) ?></h2>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-    <p>
-        <?= Html::a('Crear Evento', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
+    <?php
+        Modal::begin([
+            'header' =>'<h4>Evento</h4>',
+            'id' => 'modal',
+            'size' =>'modal-lg',
+        ]);
+        echo "<div id='modalContent'></div>";
+
+        Modal::end();
+    ?>
 
     <?= \yii2fullcalendar\yii2fullcalendar::widget(array(
       'events'=> $events,

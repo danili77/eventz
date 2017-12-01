@@ -27,7 +27,7 @@ class EventoAsset extends AssetBundle
      * @var array Los archivos js del asset.
      */
     public $js = [
-      '/js/main.js',
+      
     ];
     /**
      * @var array Las dependencias del asset.

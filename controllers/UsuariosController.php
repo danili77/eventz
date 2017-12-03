@@ -8,6 +8,7 @@ use app\models\UsuarioSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\filters\AccessControl;
 
 /**
  * UsuariosController implementa las acciones CRUD para el modelo de usuario.
@@ -18,17 +19,46 @@ class UsuariosController extends Controller
      * Devuelve un listado con los comportamientos del componente.
      * @return mixed
      */
-    public function behaviors()
-    {
-        return [
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'delete' => ['POST'],
-                ],
-            ],
-        ];
-    }
+     public function behaviors()
+     {
+         return [
+             'verbs' => [
+                 'class' => VerbFilter::className(),
+                 'actions' => [
+                     'delete' => ['POST'],
+                 ],
+             ],
+             'access' => [
+                 'class' => AccessControl::className(),
+                 'rules' => [
+                     [
+                         'allow' => true,
+                         'actions' => ['create'],
+                         'roles' => ['?'],
+                     ],
+                     [
+                         'allow' => true,
+                         'actions' => ['view', 'update', 'delete'],
+                         'roles' => ['@'],
+                         'matchCallback' => function ($rule, $action) {
+                             $id = Yii::$app->request->get('id');
+                             $idLogin = Usuario::find()->where(['id' => Yii::$app->user->id])->one()->id;
+
+                             return $id === null || $id == $idLogin;
+                         },
+                     ],
+                     [
+                         'allow' => true,
+                         'actions' => ['index', 'view', 'create', 'update', 'delete'],
+                         'roles' => ['@'],
+                         'matchCallback' => function ($rule, $action) {
+                             return Yii::$app->user->esAdmin;
+                         },
+                     ],
+                 ],
+             ],
+         ];
+     }
 
     /**
      * Lista todos los usuarios registrados en la aplicación

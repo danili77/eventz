@@ -11,6 +11,7 @@ use app\models\Usuario;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\filters\AccessControl;
 use yii\helpers\ArrayHelper;
 use mPDF;
 
@@ -24,17 +25,32 @@ class EventosController extends Controller
    * Devuelve un listado con los comportamientos del componente.
    * @return mixed
    */
-  public function behaviors()
-  {
-    return [
-      'verbs' => [
-        'class' => VerbFilter::className(),
-        'actions' => [
-          'delete' => ['POST'],
-        ],
-      ],
-    ];
-  }
+   public function behaviors()
+     {
+         return [
+             'verbs' => [
+                 'class' => VerbFilter::className(),
+                 'actions' => [
+                     'delete' => ['POST'],
+                 ],
+             ],
+             'access' => [
+                 'class' => AccessControl::className(),
+                 'rules' => [
+                     [
+                         'allow' => true,
+                         'actions' => ['index','view','calendario','gen-pdf'],
+                         'roles' => ['?'],
+                     ],
+                     [
+                         'allow' => true,
+                         'actions' => ['index','create','view', 'update', 'delete','calendario','gen-pdf'],
+                         'roles' => ['@'],
+                     ],
+                 ],
+             ],
+         ];
+     }
 
   /**
   * Lista todos los eventos.
@@ -132,11 +148,13 @@ class EventosController extends Controller
       }
     } else {
       $tipos = TipoEvento::find()->select('tipo, id')->orderBy('tipo')->indexBy('id')->column();
+      $usuario = Yii::$app->user;
       //$usuarios = Usuario::find('id=$model->id')->select('nombre, id')->orderBy('nombre')->indexBy('id')->column();
       return $this->render('create', [
         'model' => $model,
         'tipos' => $tipos,
         //'usuarios' =>$usuarios,
+        'usuario' =>$usuario
       ]);
     }
   }

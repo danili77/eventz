@@ -121,6 +121,29 @@ class SiteController extends Controller
         ]);
     }
 
+    public function actionRecuperar()
+    {
+      $model = new RecuperarForm;
+      if ($model->load(Yii::$app->request->post())) {
+          $usuario = Usuario::findOne(['email' => $model->email]);
+          if ($usuario !== null) {
+              $model->sendEmail();
+              Yii::$app->session->setFlash('emailEnviado');
+
+              return $this->refresh();
+          } else {
+              Yii::$app->session->setFlash('emailInvalido');
+
+              return $this->render('recuperar', [
+                  'model' => $model,
+              ]);
+          }
+      }
+      return $this->render('recuperar', [
+          'model' => $model,
+      ]);
+    }
+
     public function actionReproductor()
     {
         return $this->render('reproductor');

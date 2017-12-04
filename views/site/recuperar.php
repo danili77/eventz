@@ -21,7 +21,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php if (Yii::$app->session->hasFlash('emailEnviado')): ?>
 
         <div class="alert alert-success">
-            Se ha enviado un email a tu cuenta con un enlace para recuperar la contraseña.
+            Se ha enviado un email a tu cuenta.
         </div>
 
     <?php else: ?>

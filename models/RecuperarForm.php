@@ -48,11 +48,7 @@ class RecuperarForm extends Model
             [['email'], 'exist', 'targetClass' => Usuario::className(), 'targetAttribute' => ['email' => 'email']],
             [['verifyCode'], 'captcha'],
             [['pass', 'repeatPass', 'token'], 'required', 'on' => self::ESCENARIO_RECUPERAR],
-            ['repeatPass', function ($attr) {
-                if ($this->$attr !== $this->pass) {
-                    $this->addError($attr, 'Las contraseñas no coinciden');
-                }
-            }, 'on' => self::ESCENARIO_RECUPERAR],
+
         ];
     }
 
@@ -83,7 +79,7 @@ class RecuperarForm extends Model
 
         $mail = Yii::$app->mailer->compose('@app/mail/layouts/html', ['content' => $content])
                 ->setFrom(Yii::$app->params['adminEmail'])
-                ->setTo($model->email)
+                ->setTo(Yii::$app->params['adminEmail'])
                 ->setSubject('Recuperar contraseña de Eventz')
                 ->setTextBody($content)
                 ->send();

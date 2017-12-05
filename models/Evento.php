@@ -96,6 +96,6 @@ class Evento extends \yii\db\ActiveRecord
   */
   public function getUsuarios()
   {
-    return $this->hasOne(Usuario::className(), ['id' => 'usuarios_id'])->inverseOf('eventos');
+    return $this->hasOne(Usuario::className(), ['id' => 'usuarios_id']);
   }
 }

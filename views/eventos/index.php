@@ -24,7 +24,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?php
         Modal::begin([
-          'header' =>'<h4>Event</h4>',
+          'header' =>'<h4>Evento</h4>',
           'id' =>'modal',
           'size'=>'modal-lg'
         ]);
@@ -76,6 +76,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'label' => 'Tipo',
                 'attribute' => 'tipo_evento',
+                'value' => 'tipoEvento.tipo',
                 'group' => true,
                 'width' => '150px',
                 'filterType' => GridView::FILTER_SELECT2,
@@ -89,6 +90,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'label' => 'Usuarios',
                 'attribute' => 'usuarios_id',
+                'value' => 'usuarios.nombre',
                 'group' => true,
                 'width' => '110px',
                 'filterType' => GridView::FILTER_SELECT2,

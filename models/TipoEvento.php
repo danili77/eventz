@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use app\models\Evento;
 
 /**
  * Este es el modelo para la tabla "tipo_evento".
@@ -52,6 +53,6 @@ class TipoEvento extends \yii\db\ActiveRecord
      */
     public function getEventos()
     {
-        return $this->hasMany(Eventos::className(), ['tipo_evento' => 'id'])->inverseOf('tipoEvento');
+        return $this->hasMany(Evento::className(), ['tipo_evento' => 'id'])->inverseOf('tipoEvento');
     }
 }

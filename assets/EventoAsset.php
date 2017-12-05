@@ -5,7 +5,7 @@ namespace app\assets;
 use yii\web\AssetBundle;
 
 /**
- * Asset para la vista index principal.
+ * Asset para la vista index de eventos principal.
  */
 class EventoAsset extends AssetBundle
 {
@@ -27,7 +27,7 @@ class EventoAsset extends AssetBundle
      * @var array Los archivos js del asset.
      */
     public $js = [
-      
+
     ];
     /**
      * @var array Las dependencias del asset.

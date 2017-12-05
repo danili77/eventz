@@ -44,7 +44,7 @@ class EventosController extends Controller
                      ],
                      [
                          'allow' => true,
-                         'actions' => ['index','create','view', 'update', 'delete','calendario','gen-pdf'],
+                         'actions' => ['index','create','view', 'update', 'delete','calendario','gen-pdf','create-calendario'],
                          'roles' => ['@'],
                      ],
                  ],
@@ -151,6 +151,34 @@ class EventosController extends Controller
       $usuario = Yii::$app->user;
       //$usuarios = Usuario::find('id=$model->id')->select('nombre, id')->orderBy('nombre')->indexBy('id')->column();
       return $this->render('create', [
+        'model' => $model,
+        'tipos' => $tipos,
+        //'usuarios' =>$usuarios,
+        'usuario' =>$usuario
+      ]);
+    }
+  }
+
+/**
+ * Crea un nuevo evento en el calendario y en la tabla eventos
+ * @return [type] [description]
+ */
+  public function actionCreateCalendario()
+  {
+    $model = new Evento();
+    //  $model->fecha = $date;
+
+
+    if ($model->load(Yii::$app->request->post())) {
+      $model->usuarios_id = Yii::$app->user->id;
+      if ($model->save()) {
+        return $this->redirect(['view', 'id' => $model->id]);
+      }
+    } else {
+      $tipos = TipoEvento::find()->select('tipo, id')->orderBy('tipo')->indexBy('id')->column();
+      $usuario = Yii::$app->user;
+      //$usuarios = Usuario::find('id=$model->id')->select('nombre, id')->orderBy('nombre')->indexBy('id')->column();
+      return $this->renderAjax('create-calendario', [
         'model' => $model,
         'tipos' => $tipos,
         //'usuarios' =>$usuarios,

@@ -30,8 +30,6 @@ use \app\models\TipoEvento;
 
     <?= $form->field($model, 'tipo_evento')->textInput()->dropDownList($tipos) ?>
 
-    <?= $form->field($model, 'usuarios_id')->textInput(['readonly' =>($model->usuarios_id)]) ?>
-
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Crear' : 'Modificar', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>

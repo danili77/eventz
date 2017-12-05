@@ -4,6 +4,7 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\bootstrap\Modal;
 use app\models\Evento;
+use yii\helpers\Url;
 
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\EventoSearch */
@@ -12,6 +13,20 @@ use app\models\Evento;
 
 $this->title = 'Eventos';
 $this->params['breadcrumbs'][] = $this->title;
+
+$url = Url::to(['eventos/create-calendario']);
+$js = <<<EOT
+$(document).on('click','.fc-day',function() {
+    var date=$(this).attr('data-date');
+
+    $.get('$url', {'date': date}, function(data) {
+        $('#modal').modal('show')
+        .find('#modalContent')
+        .html(data);
+    });
+});
+EOT;
+$this->registerJs($js);
 ?>
 <div class="evento-index">
 

@@ -5,12 +5,14 @@ use yii\grid\GridView;
 use yii\bootstrap\Modal;
 use app\models\Evento;
 use yii\helpers\Url;
+use app\assets\EventoAsset;
+
 
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\EventoSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-
+EventoAsset::register($this);
 $this->title = 'Eventos';
 $this->params['breadcrumbs'][] = $this->title;
 
@@ -47,4 +49,9 @@ $this->registerJs($js);
     <?= \yii2fullcalendar\yii2fullcalendar::widget(array(
       'events'=> $events,
   ));?>
+  <?= Html::a(
+    'Volver',
+    ['../eventos/index'],
+    ['class' => 'btn btn-success btnVolver']
+  ); ?>
 </div>

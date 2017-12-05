@@ -136,6 +136,11 @@ $this->params['breadcrumbs'][] = $this->title;
         'responsive'=>true,
         'hover'=>true,
     ]); ?>
+    <?= Html::a(
+      'Volver',
+      ['../site/index'],
+      ['class' => 'btn btn-success btnVolver']
+    ); ?>
 
 
 </div>

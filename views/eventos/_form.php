@@ -31,8 +31,15 @@ use \app\models\TipoEvento;
     <?= $form->field($model, 'tipo_evento')->textInput()->dropDownList($tipos) ?>
 
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Crear' : 'Modificar', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+        <?= Html::submitButton($model->isNewRecord ? 'Crear' : 'Modificar', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary'])
+         ?>
+         <?= Html::a(
+           'Cancelar',
+           ['../eventos/index'],
+           ['class' => 'btn btn-danger']
+         ); ?>
     </div>
+
 
     <?php ActiveForm::end(); ?>
 

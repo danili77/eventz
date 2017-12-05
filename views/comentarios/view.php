@@ -31,9 +31,15 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'texto_comentario',
             'fecha:datetime',
-            'eventos.nombre',
-            'usuarios.nombre',
+            'eventos_id',
+            'usuarios_id',
         ],
     ]) ?>
+
+    <?= Html::a(
+      'Volver',
+      ['../comentarios/index'],
+      ['class' => 'btn btn-success btnVolver']
+    ); ?>
 
 </div>

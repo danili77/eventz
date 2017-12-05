@@ -2,10 +2,12 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use app\assets\EventoAsset;
+
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Evento */
-
+EventoAsset::register($this);
 $this->title = $model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Eventos', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
@@ -63,8 +65,15 @@ $this->params['breadcrumbs'][] = $this->title;
         </div><br>
 
 
+
+
       <?php } ?>
       <hr>
+      <?= Html::a(
+        'Volver',
+        ['../eventos/index'],
+        ['class' => 'btn btn-success btnVolver']
+      ); ?>
       <br><br>
 
 </div>

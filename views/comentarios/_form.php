@@ -26,6 +26,11 @@ use yii\jui\DatePicker;
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Crear' : 'Modificar', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+        <?= Html::a(
+          'Cancelar',
+          ['../comentarios/index'],
+          ['class' => 'btn btn-danger']
+        ); ?>
     </div>
 
     <?php ActiveForm::end(); ?>

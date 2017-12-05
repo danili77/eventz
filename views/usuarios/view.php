@@ -16,6 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <p>
         <?= Html::a('Modificar', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+
     </p>
 
     <?= DetailView::widget([
@@ -27,5 +28,11 @@ $this->params['breadcrumbs'][] = $this->title;
             'created_at:datetime'
         ],
     ]) ?>
+
+    <?= Html::a(
+      'Volver',
+      ['../site/index'],
+      ['class' => 'btn btn-success btnVolver']
+    ); ?>
 
 </div>

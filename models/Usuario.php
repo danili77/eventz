@@ -167,6 +167,14 @@ class Usuario extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
   }
 
   /**
+   * @return \yii\db\ActiveQuery
+   */
+  public function getComentarios()
+  {
+      return $this->hasMany(Comentario::className(), ['usuarios_id' => 'id'])->inverseOf('idUsuario');
+  }
+
+  /**
    * Realiza las modificaciones necesarias antes de guardar al usuario en la
    * base de datos.
    * @param  bool $insert true si se va ha realizar una inserción.

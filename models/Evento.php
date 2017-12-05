@@ -55,7 +55,7 @@ class Evento extends \yii\db\ActiveRecord
   {
     return [
       'id' => 'ID',
-      'nombre' => 'Nombre',
+      'nombre' => 'Evento',
       'descripcion' => 'Descripción',
       'fecha' => 'Fecha',
       'lugar' => 'Lugar',

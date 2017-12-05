@@ -61,6 +61,14 @@ class Comentario extends \yii\db\ActiveRecord
      */
     public function getUsuarios()
     {
-        return $this->hasOne(Usuarios::className(), ['id' => 'usuarios_id'])->inverseOf('comentarios');
+        return $this->hasOne(Usuario::className(), ['id' => 'usuarios_id'])->inverseOf('comentarios');
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getEventos()
+    {
+        return $this->hasOne(Evento::className(), ['id' => 'usuarios_id']);
     }
 }

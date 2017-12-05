@@ -34,8 +34,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'descripcion:ntext',
             'fecha:datetime',
             'lugar',
-            'tipo_evento',
-            'usuarios_id',
+            'tipoEvento.tipo',
+            'usuarios.nombre',
         ],
     ]) ?>
 
@@ -50,7 +50,6 @@ $this->params['breadcrumbs'][] = $this->title;
       <div class="bg-info">
 
         <p><?= $comentario->texto_comentario ?></p>
-        <p>Autor del comentario:<?= $comentario->usuarios_id ?></p>
         <p>Fecha comentario:<?= Yii::$app->formatter->asDate($comentario->fecha, 'php:d-m-Y');?></p>
         <?= Html::a('Ver', ['/comentarios/view', 'id' => $comentario->id], ['class' => 'btn btn-xs btn-info btnsAction']) ?>
         <?= Html::a('Modificar', ['/comentarios/update', 'id' => $comentario->id], ['class' => 'btn btn-xs btn-warning']) ?>

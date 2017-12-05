@@ -59,8 +59,7 @@ class EventosController extends Controller
   public function actionIndex()
   {
     $tipos = TipoEvento::find()->select('tipo, id')->orderBy('tipo')->indexBy('id')->column();
-    $usuarios = Usuario::find()->asArray()->all();
-    $usuarios = ArrayHelper::map($usuarios, 'id', 'id');
+    $usuarios = Usuario::find('id=$model->id')->select('nombre, id')->orderBy('nombre')->indexBy('id')->column();
 
     $searchModel = new EventoSearch();
     $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
@@ -69,7 +68,7 @@ class EventosController extends Controller
       'tipos' => $tipos,
       'searchModel' => $searchModel,
       'dataProvider' => $dataProvider,
-      'usuarios' => $usuarios
+      'usuarios' => $usuarios,
     ]);
   }
 
@@ -148,13 +147,10 @@ class EventosController extends Controller
       }
     } else {
       $tipos = TipoEvento::find()->select('tipo, id')->orderBy('tipo')->indexBy('id')->column();
-      $usuario = Yii::$app->user;
-      //$usuarios = Usuario::find('id=$model->id')->select('nombre, id')->orderBy('nombre')->indexBy('id')->column();
+      $usuarios = Usuario::find('id=$model->id')->select('nombre, id')->orderBy('nombre')->indexBy('id')->column();
       return $this->render('create', [
         'model' => $model,
         'tipos' => $tipos,
-        //'usuarios' =>$usuarios,
-        'usuario' =>$usuario
       ]);
     }
   }
@@ -177,7 +173,6 @@ class EventosController extends Controller
     } else {
       $tipos = TipoEvento::find()->select('tipo, id')->orderBy('tipo')->indexBy('id')->column();
       $usuario = Yii::$app->user;
-      //$usuarios = Usuario::find('id=$model->id')->select('nombre, id')->orderBy('nombre')->indexBy('id')->column();
       return $this->renderAjax('create-calendario', [
         'model' => $model,
         'tipos' => $tipos,
@@ -207,6 +202,7 @@ class EventosController extends Controller
       return $this->render('update', [
         'model' => $model,
         'tipos' => $tipos,
+
       ]);
     }
   }

@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use app\models\Usuario;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Comentario */
@@ -30,8 +31,8 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'texto_comentario',
             'fecha:datetime',
-            'eventos_id',
-            'usuarios_id',
+            'eventos.nombre',
+            'usuarios.nombre',
         ],
     ]) ?>
 

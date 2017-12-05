@@ -5,10 +5,13 @@ namespace app\controllers;
 use Yii;
 use app\models\Comentario;
 use app\models\ComentarioSearch;
+use app\models\Usuario;
+use app\models\Evento;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+
 
 /**
  * ComentariosController implementa las acciones CRUD para el modelo Comentario.

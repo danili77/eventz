@@ -1,4 +1,4 @@
-![Logo](web/imagenes/logoPdf.png) **Eventz**
+![Logo](/imagenes/logoPdf.png) **Eventz**
 ==================================
 Descripción general del proyecto
 --------------------------------

@@ -1,0 +1,129 @@
+Array
+(
+    [0] => Array
+        (
+            [line] => 124
+            [file] => controllers/SiteController.php
+            [message] => No docblock for element 'actionRecuperar'
+        )
+
+    [1] => Array
+        (
+            [line] => 147
+            [file] => controllers/SiteController.php
+            [message] => No docblock for element 'actionReproductor'
+        )
+
+    [2] => Array
+        (
+            [line] => 13
+            [file] => models/ContactForm.php
+            [message] => No docblock for element '$name'
+        )
+
+    [3] => Array
+        (
+            [line] => 13
+            [file] => models/ContactForm.php
+            [message] => No short description for element '$name'
+        )
+
+    [4] => Array
+        (
+            [line] => 14
+            [file] => models/ContactForm.php
+            [message] => No docblock for element '$email'
+        )
+
+    [5] => Array
+        (
+            [line] => 14
+            [file] => models/ContactForm.php
+            [message] => No short description for element '$email'
+        )
+
+    [6] => Array
+        (
+            [line] => 15
+            [file] => models/ContactForm.php
+            [message] => No docblock for element '$subject'
+        )
+
+    [7] => Array
+        (
+            [line] => 15
+            [file] => models/ContactForm.php
+            [message] => No short description for element '$subject'
+        )
+
+    [8] => Array
+        (
+            [line] => 16
+            [file] => models/ContactForm.php
+            [message] => No docblock for element '$body'
+        )
+
+    [9] => Array
+        (
+            [line] => 16
+            [file] => models/ContactForm.php
+            [message] => No short description for element '$body'
+        )
+
+    [10] => Array
+        (
+            [line] => 17
+            [file] => models/ContactForm.php
+            [message] => No docblock for element '$verifyCode'
+        )
+
+    [11] => Array
+        (
+            [line] => 17
+            [file] => models/ContactForm.php
+            [message] => No short description for element '$verifyCode'
+        )
+
+    [12] => Array
+        (
+            [line] => 17
+            [file] => models/LoginForm.php
+            [message] => No docblock for element '$username'
+        )
+
+    [13] => Array
+        (
+            [line] => 17
+            [file] => models/LoginForm.php
+            [message] => No short description for element '$username'
+        )
+
+    [14] => Array
+        (
+            [line] => 18
+            [file] => models/LoginForm.php
+            [message] => No docblock for element '$password'
+        )
+
+    [15] => Array
+        (
+            [line] => 18
+            [file] => models/LoginForm.php
+            [message] => No short description for element '$password'
+        )
+
+    [16] => Array
+        (
+            [line] => 19
+            [file] => models/LoginForm.php
+            [message] => No docblock for element '$rememberMe'
+        )
+
+    [17] => Array
+        (
+            [line] => 19
+            [file] => models/LoginForm.php
+            [message] => No short description for element '$rememberMe'
+        )
+
+)

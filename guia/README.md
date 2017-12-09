@@ -1,4 +1,4 @@
-![Logo](images/logo.png) **MisterFut**
+**Eventz**
 ==================================
 Descripción general del proyecto
 --------------------------------

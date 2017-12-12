@@ -18,7 +18,7 @@ $this->title = $model->nombre;
         'attributes' => [
             'nombre',
             'descripcion:ntext',
-            'fecha:datetime',
+            'fecha:date',
             'lugar',
             //'tipo_evento',
             //'usuarios_id',

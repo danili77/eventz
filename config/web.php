@@ -46,13 +46,6 @@ $config = [
 
             ],
         ],
-        'formatter' => [
-      			'class' => 'yii\i18n\Formatter',
-      			'nullDisplay' => '-',
-      			'dateFormat' => 'd-M-Y',
-      			'datetimeFormat' => 'd-M-Y',
-      			'timeFormat' => 'H:i:s',
-		    ],
         'log' => require(__DIR__ . '/log.php'),
         'db' => $db,
 

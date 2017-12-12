@@ -34,7 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'nombre',
             'descripcion:ntext',
-            'fecha:datetime',
+            'fecha:date',
             'lugar',
             'tipoEvento.tipo',
             'usuarios.nombre',

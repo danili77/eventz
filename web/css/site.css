@@ -136,10 +136,21 @@ nav#w0,nav#w1,nav#w4
   color:white;
 }
 
+#w0 p,#w1 p,#w4 p
+{
+  -webkit-transition: color 1s linear 1s;
+  -moz-transition: color 1s linear 1s;
+  transition: color 1s linear 1s;
+}
+
 #w0 li a,#w1 li a,#w4 li a
 {
   font-size:12px;
   font-weight: bold;
+}
+
+#w0 p:hover,#w1 p:hover,#w4 p:hover {
+    color: black;
 }
 
 

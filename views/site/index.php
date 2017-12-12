@@ -21,14 +21,6 @@ $this->title = 'Inicio';
                 <article>
                   <h2>Eventz</h2>
                     <p><span itemprop="description"><span itemprop="name">Eventz</span> es una <span itemprop="applicationCategory">aplicación web</span> desarrollada por<span itemprop="creator">Daniel Lorenzo Ibáñez</span>,con el objetivo de ofrecer una herramienta que facilite la gestión de eventos a los usuarios.La idea de Eventz comienza a desarrollarse en Sanlúcar de Barrameda(Cádiz) en el año <span itemprop="dateCreated">2017</span>,como proyecto integrado final del Ciclo Formativo de Grado Superior de Desarrollo de Aplicaciones Web.Se puede abrir en cualquier navegador de <span itemprop="operatingSystem">cualquier sistema operativo.</span></p>
-                    <p>Dispone de las siguientes caracteristicas: </p>
-                    <ul>
-                        <li>Gestión de Eventos.</li>
-                        <li>Paso de listado de eventos a documento PDF.</li>
-                        <li>Gestión de Comentarios sobre eventos.</li>
-                        <li>Calendario interactivo.Donde es posible ver los eventos y crear nuevos.</li>
-                        <li>Gestión de Usuarios(Solo el administrador de la página)</li>
-                    </ul>
 
                   </article>
                     <article>

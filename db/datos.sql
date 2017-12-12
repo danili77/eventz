@@ -1,15 +1,9 @@
-----Insertar usuarios----
-insert into usuarios(nombre,password)
-values('dani',crypt('dani',gen_salt('bf',13)));
-
-insert into usuarios(nombre,password)
-values('pepe',crypt('pepe',gen_salt('bf',13)));
-
-insert into usuarios(nombre,password)
-values('maria',crypt('maria',gen_salt('bf',13)));
-
-insert into usuarios(nombre,password)
-values('admin',crypt('admin',gen_salt('bf',13)));
+----Insertar usuarios---- 
+insert into usuarios(nombre,email,password)
+values('dani','daniel.lorenzo@iesdonana.org',crypt('dani',gen_salt('bf',13))),
+('pepe','pepe@gmail.com',crypt('pepe',gen_salt('bf',13))),
+('maria','maria@gmail.com',crypt('maria',gen_salt('bf',13))),
+('admin','admin@gmail.com',crypt('admin',gen_salt('bf',13)));
 
 ---Insertar tipos de eventos---
 
@@ -37,64 +31,77 @@ values('Feria de Sanlucar de Barrameda','La Feria de la Manzanilla se inaugurar�
 
 
 insert into eventos(nombre,descripcion,fecha,lugar,tipo_evento,usuarios_id)
-values('Desafio Doñana','El Desafío Doñana es una carrera de resistencia dentro del segmento de los eventos de larga distancia compuesta por tres disciplinas deportivas diferentes: ciclismo, natación y carrera a pie','2017/04/06','Sanlucar-Trebujena',2,2);
+values('Desafio Doñana','El Desafío Doñana es una carrera de resistencia dentro del segmento de los eventos de larga distancia compuesta por tres disciplinas deportivas diferentes: ciclismo, natación y carrera a pie','2017/04/06','Sanlucar',2,2);
 
 
 insert into eventos(nombre,descripcion,fecha,lugar,tipo_evento,usuarios_id)
 values('Festival de musica Ciudad de Chipiona','Juventudes Musicales ha hecho público el programa de la undécima edición del Festival de Música Ciudad de Chipiona 2017, una referencia fundamental de la oferta cultural veraniega en la localidad que este año contará con veinte conciertos, nueve menos que el pasado año, debido a falta de fechas para ofrece más recitales.','2017/02/20','Chipiona',3,3);
 
+
 insert into eventos(nombre,descripcion,fecha,lugar,tipo_evento,usuarios_id)
 values('29º Conferencia de Ferran Adria','El prestigioso chef Ferran Adrià, considerado uno de los mejores cocineros e incluido en la lista de los diez personajes más innovadores del mundo de la revista norteamericana Time en el año 2004, pronunciará este jueves 29 de junio, a las 12 horas y en el Aula Magna de la Facultad de Filosofía y Letras de la Universidad de Cádiz, un conferencia sobre Innovación y Emprendimiento.','2017/03/01','Aula Magna,Cadiz',4,4);
+
+
+insert into eventos(nombre,descripcion,fecha,lugar,tipo_evento,usuarios_id)
+values('Festival asi canta Sanlúcar en navidad','Villancicos y buen ambiente, a un lado, y jornada de convivencia entre numerosos sanluqueños que no quisieron dejar pasar la oportunidad de disfrutar ya del ambiente de la Navidad, y acompañar a la Orden de los Reyes Magos en un pasito más para conseguir su objetivo.Todo el dinero recogido irá destinado a este fin, con el objeto de que ningún niño de la ciudad se quede sin recibir su regalo el próximo 6 de enero.','2017/12/02','Centro de Exposiciones y Congresos Primera Vuelta al Mundo,Sanlúcar',6,6);
+
+
 
 ---Insertar comentarios---
 
 insert into comentarios(texto_comentario,eventos_id,usuarios_id)
-values('Comentario 1','1','1');
+values('Me lo pase genial...','1','1');
 
 insert into comentarios(texto_comentario,eventos_id,usuarios_id)
-values('Comentario 2','2','1');
+values('Prueba un poco dura pero bien.','2','1');
 
 insert into comentarios(texto_comentario,eventos_id,usuarios_id)
-values('Comentario 3','3','1');
+values('Musica en estado puro...','3','1');
 
 insert into comentarios(texto_comentario,eventos_id,usuarios_id)
-values('Comentario 4','4','1');
+values('Se aprende bastante de este cocinero.','4','1');
+
+insert into comentarios(texto_comentario,eventos_id,usuarios_id)
+values('Por una buena causa.','6','1');
 
 
 insert into comentarios(texto_comentario,eventos_id,usuarios_id)
-values('Comentario 1','1','2');
+values('Volvere el proximo año...','1','2');
 
 insert into comentarios(texto_comentario,eventos_id,usuarios_id)
-values('Comentario 2','2','2');
+values('Prueba magnifica.','2','2');
 
 insert into comentarios(texto_comentario,eventos_id,usuarios_id)
-values('Comentario 3','3','2');
+values('Pasamos un dia muy bueno en el.','3','2');
 
 insert into comentarios(texto_comentario,eventos_id,usuarios_id)
-values('Comentario 4','4','2');
+values('Innovador chef.','4','2');
+
+insert into comentarios(texto_comentario,eventos_id,usuarios_id)
+values('Asisti,me lo pase muy bien y colaboro en una buena causa.','6','2');
 
 
 insert into comentarios(texto_comentario,eventos_id,usuarios_id)
 values('Comentario 1','1','3');
 
 insert into comentarios(texto_comentario,eventos_id,usuarios_id)
-values('Comentario 2','2','3');
+values('Muy bien organizada...','2','3');
 
 insert into comentarios(texto_comentario,eventos_id,usuarios_id)
-values('Comentario 3','3','3');
+values('Gran cantidad de bandas.','3','3');
 
 insert into comentarios(texto_comentario,eventos_id,usuarios_id)
-values('Comentario 4','4','3');
+values('Cocina en estado puro.','4','3');
 
 
 insert into comentarios(texto_comentario,eventos_id,usuarios_id)
-values('Comentario 1','1','4');
+values('Me gusto mucho...','1','4');
 
 insert into comentarios(texto_comentario,eventos_id,usuarios_id)
-values('Comentario 2','2','4');
+values('Pesima recepción,por lo demas ok.','2','4');
 
 insert into comentarios(texto_comentario,eventos_id,usuarios_id)
-values('Comentario 3','3','4');
+values('Festival magnifico','3','4');
 
 insert into comentarios(texto_comentario,eventos_id,usuarios_id)
-values('Comentario 4','4','4');
+values('Genial...','4','4'); 

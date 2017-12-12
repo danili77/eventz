@@ -26,6 +26,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
         ]) ?>
         <?= Html::a('Pasar a PDF', ['gen-pdf','id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Ver Calendario', ['/eventos/calendario'], ['class' => 'btn btn-primary']) ?>
 
     </p>
 

@@ -109,8 +109,9 @@ AppAsset::register($this);
 <footer class="footer">
     <div class="container">
         <p class="pull-left">&copy; Eventz <?= date('Y') ?>/Dani L.I</p>
-
         <p class="pull-right"><button id="botonR">Player</button></p>
+        <p class="pull-right infoCancion">sasa</p>
+
 
     </div>
 </footer>

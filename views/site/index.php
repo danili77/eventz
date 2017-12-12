@@ -31,8 +31,6 @@ $this->title = 'Inicio';
                         <p>Si dispone de alguna consulta o sugerencia, no dude en
                         ponerse en contacto con nosotros a través de la sección de
                         <span itemprop="url"><?= Html::a('Contacto', ['contact']) ?></span>
-
-
                         </p>
                     </article>
                 </div>

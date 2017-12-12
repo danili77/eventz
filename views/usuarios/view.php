@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use app\assets\UsuarioAsset;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Usuario */
@@ -9,6 +10,7 @@ use yii\widgets\DetailView;
 $this->title = $model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Usuarios', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
+UsuarioAsset::register($this);
 ?>
 <div class="usuario-view">
 
@@ -25,7 +27,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'nombre',
             'email',
-            'created_at:datetime'
+            'created_at:date'
         ],
     ]) ?>
 

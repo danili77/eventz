@@ -1,11 +1,11 @@
-![Logo](images/logo.png) **MisterFut**
-==================================
+![Logo](imagenes/logo.png) **Eventz**
+===================================
 Descripción general del proyecto
 --------------------------------
 *   [Funcionalidad principal de la apllicación](funcionalidad.md)
 *   [Objetivos generales](objetivos.md)
-*   [Url del repositorio en GitHub](https://github.com/christianchf/misterfut)
-*   [Url de la documentación en GitHub Pages](https://christianchf.github.io/misterfut/)
+*   [Url del repositorio en GitHub](https://github.com/danili77/eventz)
+*   [Url de la documentación en GitHub Pages](https://danili77.github.io/eventz/index.html)
 
 Instrucciones de instalación y despliegue
 -----------------------------------------
@@ -44,7 +44,7 @@ Conclusiones
 
 Anexos
 ------------
-*   [Anexo I: Prueba del seis](prueba-seis.md)
+*   [Anexo I: Prueba Jacob nielsen](prueba-jacob.md)
 *   [Anexo II: Validación CSS](validacion-css.md)
 *   [Anexo III: Validación HTML](validacion-html.md)
 *   [Anexo IV: Validación accesibilidad](validacion-accesibilidad.md)

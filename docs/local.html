@@ -47,7 +47,7 @@
 <a class="list-group-item" href="./datos.html">De estructura lógica de datos</a></div>
 <a class="list-group-item" href="#navigation-223" data-toggle="collapse" data-parent="#navigation">Glosario de términos <b class="caret"></b></a><div id="navigation-223" class="submenu panel-collapse collapse"><a class="list-group-item" href="./glosario.html">Glosario de términos</a></div>
 <a class="list-group-item" href="#navigation-224" data-toggle="collapse" data-parent="#navigation">Conclusiones <b class="caret"></b></a><div id="navigation-224" class="submenu panel-collapse collapse"><a class="list-group-item" href="./conclusiones.html">Conclusiones</a></div>
-<a class="list-group-item" href="#navigation-225" data-toggle="collapse" data-parent="#navigation">Anexos <b class="caret"></b></a><div id="navigation-225" class="submenu panel-collapse collapse"><a class="list-group-item" href="./prueba-seis.html">Anexo I: Prueba del seis</a>
+<a class="list-group-item" href="#navigation-225" data-toggle="collapse" data-parent="#navigation">Anexos <b class="caret"></b></a><div id="navigation-225" class="submenu panel-collapse collapse"><a class="list-group-item" href="./prueba-seis.html">Anexo I: Prueba Jacob Nielsen</a>
 <a class="list-group-item" href="./validacion-css.html">Anexo II: Validación CSS</a>
 <a class="list-group-item" href="./validacion-html.html">Anexo III: Validación HTML</a>
 <a class="list-group-item" href="./validacion-accesibilidad.html">Anexo IV: Validación accesibilidad</a>
@@ -57,20 +57,20 @@
     <div class="col-md-9 guide-content" role="main">
         <h1>Instrucciones de instalación en local <span id="instrucciones-de-instalacion-en-local"></span><a href="#instrucciones-de-instalacion-en-local" class="hashlink">&para;</a></h1><p>Para la instalación de la aplicación en local son necesarios una serie de requisitos:</p>
 <ul>
-<li>php &gt;= 7.0.0</li>
+<li>php &gt;= 7.1.11</li>
 <li>PostgreSQL &gt;= 9.5</li>
 <li>composer</li>
 <li>Servidor bien configurado, por ejemplo Apache2</li>
 </ul>
 <p>Una vez cumplidos estos requisitos deberás realizar los siguientes pasos para llevar a cabo la instalación de la aplicación:</p>
 <ol>
-<li><p>Tener el Apache2 (u otro servidor) configurado con un nombre de dominio creado (por ejemplo: <code>misterfut.local</code>) y enlazado a <code>misterfut/web/</code>.</p>
+<li><p>Tener el Apache2 (u otro servidor) configurado con un nombre de dominio creado (por ejemplo: <code>eventz.local</code>) y enlazado a <code>eventz/web/</code>.</p>
 </li>
 <li><p>Instalar <code>composer</code>.</p>
 </li>
 <li><p>Realizar los siguientes comandos en consola:
-<code>git clone https://github.com/christianchf/misterfut.git
-cd misterfut
+<code>git clone https://github.com/danili77/eventz.git
+cd eventz
 composer install
 composer run-script post-create-project-cmd</code></p>
 </li>
@@ -78,7 +78,7 @@ composer run-script post-create-project-cmd</code></p>
 <code>cd db
 ./create.sh
 ./load.sh</code>
-&gt; Después de realizar estos comandos se habrá creado una base de datos llamada <code>misterfut</code> con un usuario <code>misterfut</code> y contraseña <code>misterfut</code>.</p>
+&gt; Después de realizar estos comandos se habrá creado una base de datos llamada <code>eventz</code> con un usuario <code>eventz</code> y contraseña <code>eventz</code>.</p>
 </li>
 <li><p>Cambiar la siguiente configuración dentro del proyecto:</p>
 <ul>

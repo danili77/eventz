@@ -57,145 +57,137 @@
     <div class="col-md-9 guide-content" role="main">
         <h1>Definición detallada <span id="definicion-detallada"></span><a href="#definicion-detallada" class="hashlink">&para;</a></h1><table class="table table-bordered table-striped">
 <thead>
-<tr><th><strong>R1:</strong> </th><th>CREAR USUARIO</th></tr>
+<tr><th><strong>R1:</strong> </th><th>CREAR UN USUARIO ADMINISTRADOR Y NORMAL</th></tr>
 </thead>
 <tbody>
-<tr><td>Descripción          </td><td>La aplicación permitirá a los usuarios registrarse para poder interactuar con ella.</td></tr>
+<tr><td>Descripción          </td><td>Mediante un formulario de entrada de datos se creara un usuario de tipo administrador  o normal en la base de datos con los privilegisos del requisito R2</td></tr>
 <tr><td>Prioridad            </td><td>IMPORTANTE</td></tr>
 <tr><td>Tipo                 </td><td>Funcional</td></tr>
-<tr><td>Complejidad          </td><td>Media</td></tr>
+<tr><td>Complejidad          </td><td>Facil</td></tr>
 <tr><td>Entrega planificada  </td><td>v1</td></tr>
 <tr><td>Entrega realizada    </td><td>v1</td></tr>
-<tr><td>Nº issue             </td><td><a href="https://github.com/christianchf/misterfut/issues/1">1</a></td></tr>
 </tbody>
 </table>
 <hr />
 <table class="table table-bordered table-striped">
 <thead>
-<tr><th><strong>R2:</strong>              </th><th>MODIFICAR USUARIO</th></tr>
+<tr><th><strong>R2:</strong>              </th><th>PRIVILEGIOS PARA UN USUARIO ADMINISTRADOR Y NORMAL</th></tr>
 </thead>
 <tbody>
-<tr><td>Descripción          </td><td>La aplicación permitirá a cada usuario poder modificar sus propios datos, siempre y cuando este logueado (R5).</td></tr>
+<tr><td>Descripción          </td><td>Se dispondran los privilegios para un usuario administrador.Basicamente podra gestionar los usuarios de la aplicacion y un usuario normal podra gestionar los eventos y comentarios</td></tr>
 <tr><td>Prioridad            </td><td>IMPORTANTE</td></tr>
 <tr><td>Tipo                 </td><td>Funcional</td></tr>
 <tr><td>Complejidad          </td><td>Media</td></tr>
 <tr><td>Entrega planificada  </td><td>v1</td></tr>
 <tr><td>Entrega realizada    </td><td>v1</td></tr>
-<tr><td>Nº issue             </td><td><a href="https://github.com/christianchf/misterfut/issues/2">2</a></td></tr>
 </tbody>
 </table>
 <hr />
 <table class="table table-bordered table-striped">
 <thead>
-<tr><th><strong>R3:</strong>              </th><th>BORRAR USUARIO</th></tr>
+<tr><th><strong>R3:</strong>              </th><th>REGISTRAR UN USUARIO NORMAL</th></tr>
 </thead>
 <tbody>
-<tr><td>Descripción          </td><td>La aplicación permitirá, al usuario administrador, borrar a los usuarios.</td></tr>
+<tr><td>Descripción          </td><td>Mediante un formulario de entrada de datos se creara un usuario normal en la base de datos que podra gestionar eventos y comentarios.</td></tr>
+<tr><td>Prioridad            </td><td>IMPORTANTE</td></tr>
+<tr><td>Tipo                 </td><td>Funcional</td></tr>
+<tr><td>Complejidad          </td><td>facil</td></tr>
+<tr><td>Entrega planificada  </td><td>v1</td></tr>
+<tr><td>Entrega realizada    </td><td>v1</td></tr>
+</tbody>
+</table>
+<hr />
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th><strong>R4:</strong>              </th><th>VALIDACION DE USUARIO MEDIANTE EMAIL</th></tr>
+</thead>
+<tbody>
+<tr><td>Descripción          </td><td>Cuando un usuario se registre mediante un formulario de datos y proporcione su email se le enviara a su email un correo electronico de confirmacion y el usuario ya podra gestionar eventos.</td></tr>
+<tr><td>Prioridad            </td><td>OPCIONAL</td></tr>
+<tr><td>Tipo                 </td><td>Funcional</td></tr>
+<tr><td>Complejidad          </td><td>Media</td></tr>
+<tr><td>Entrega planificada  </td><td>v1</td></tr>
+<tr><td>Entrega realizada    </td><td>v1</td></tr>
+</tbody>
+</table>
+<hr />
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th><strong>R5:</strong>              </th><th>PRIVILEGIOS PARA USUARIOS REGISTRADOS</th></tr>
+</thead>
+<tbody>
+<tr><td>Descripción          </td><td>Cuando un usuario se registre mediante un formulario de datos ya podra gestionar eventos y comentarios.</td></tr>
 <tr><td>Prioridad            </td><td>IMPORTANTE</td></tr>
 <tr><td>Tipo                 </td><td>Funcional</td></tr>
 <tr><td>Complejidad          </td><td>Media</td></tr>
 <tr><td>Entrega planificada  </td><td>v1</td></tr>
 <tr><td>Entrega realizada    </td><td>v1</td></tr>
-<tr><td>Nº issue             </td><td><a href="https://github.com/christianchf/misterfut/issues3">3</a></td></tr>
 </tbody>
 </table>
 <hr />
 <table class="table table-bordered table-striped">
 <thead>
-<tr><th><strong>R4:</strong>              </th><th>VER DATOS DEL USUARIO</th></tr>
+<tr><th><strong>R6:</strong>              </th><th>CONSULTA DE DATOS USUARIOS</th></tr>
 </thead>
 <tbody>
-<tr><td>Descripción          </td><td>La aplicación permitirá a cada usuario ver sus propios datos. Además, el usuario administrador podrá ver los datos de todos los usuarios.</td></tr>
+<tr><td>Descripción          </td><td>Cuando un usuario se registre podra visualizar sus datos:nombre,contraseña,email...etc.El usuario administrador podra ver los datos de todos los usuarios.</td></tr>
+<tr><td>Prioridad            </td><td>IMPORTANTE</td></tr>
+<tr><td>Tipo                 </td><td>Funcional</td></tr>
+<tr><td>Complejidad          </td><td>Facil</td></tr>
+<tr><td>Entrega planificada  </td><td>v1</td></tr>
+<tr><td>Entrega realizada    </td><td>v1</td></tr>
+</tbody>
+</table>
+<hr />
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th><strong>R7:</strong>              </th><th>Modificacion de datos usuarios</th></tr>
+</thead>
+<tbody>
+<tr><td>Descripción          </td><td>Cuando un usuario se registre podra modificar sus datos email,usuario...etc.El usuario admin podra modificar los datos de todos los usuarios.</td></tr>
 <tr><td>Prioridad            </td><td>IMPORTANTE</td></tr>
 <tr><td>Tipo                 </td><td>Funcional</td></tr>
 <tr><td>Complejidad          </td><td>Media</td></tr>
 <tr><td>Entrega planificada  </td><td>v1</td></tr>
 <tr><td>Entrega realizada    </td><td>v1</td></tr>
-<tr><td>Nº issue             </td><td><a href="https://github.com/christianchf/misterfut/issues/4">4</a></td></tr>
 </tbody>
 </table>
 <hr />
 <table class="table table-bordered table-striped">
 <thead>
-<tr><th><strong>R5:</strong>              </th><th>LOGIN</th></tr>
+<tr><th><strong>R8:</strong>              </th><th>Recuperacion de contraseña usuario</th></tr>
 </thead>
 <tbody>
-<tr><td>Descripción          </td><td>La aplicación permitirá a los usuarios, previamente registrados (R1), ejercer la acción de login para acceder a su sesión.</td></tr>
+<tr><td>Descripción          </td><td>Un usuario registrado podra recuperar su contraseña si esta es olvidada.</td></tr>
 <tr><td>Prioridad            </td><td>IMPORTANTE</td></tr>
 <tr><td>Tipo                 </td><td>Funcional</td></tr>
 <tr><td>Complejidad          </td><td>Media</td></tr>
 <tr><td>Entrega planificada  </td><td>v1</td></tr>
 <tr><td>Entrega realizada    </td><td>v1</td></tr>
-<tr><td>Nº issue             </td><td><a href="https://github.com/christianchf/misterfut/issues/5">5</a></td></tr>
+
 </tbody>
 </table>
 <hr />
 <table class="table table-bordered table-striped">
 <thead>
-<tr><th><strong>R6:</strong>              </th><th>LOGOUT</th></tr>
+<tr><th><strong>R9:</strong>              </th><th>DAR DE BAJA-ELIMINAR UN USUARIO</th></tr>
 </thead>
 <tbody>
-<tr><td>Descripción          </td><td>La aplicación permitirá a los usuarios, previamente logueados (R5), ejercer la acción de logout para cerrar su sesión.</td></tr>
-<tr><td>Prioridad            </td><td>IMPORTANTE</td></tr>
-<tr><td>Tipo                 </td><td>Funcional</td></tr>
-<tr><td>Complejidad          </td><td>Media</td></tr>
-<tr><td>Entrega planificada  </td><td>v1</td></tr>
-<tr><td>Entrega realizada    </td><td>v1</td></tr>
-<tr><td>Nº issue             </td><td><a href="https://github.com/christianchf/misterfut/issues/6">6</a></td></tr>
-</tbody>
-</table>
-<hr />
-<table class="table table-bordered table-striped">
-<thead>
-<tr><th><strong>R7:</strong>              </th><th>AUTOLOGIN</th></tr>
-</thead>
-<tbody>
-<tr><td>Descripción          </td><td>La aplicación permitirá a los usuarios, previamente registrados (R1), realizar la opción de autologin en el caso de que lo deseen marcando la opción de "Recordar contraseña".</td></tr>
-<tr><td>Prioridad            </td><td>IMPORTANTE</td></tr>
-<tr><td>Tipo                 </td><td>Funcional</td></tr>
-<tr><td>Complejidad          </td><td>Media</td></tr>
-<tr><td>Entrega planificada  </td><td>v1</td></tr>
-<tr><td>Entrega realizada    </td><td>v1</td></tr>
-<tr><td>Nº issue             </td><td><a href="https://github.com/christianchf/misterfut/issues/7">7</a></td></tr>
-</tbody>
-</table>
-<hr />
-<table class="table table-bordered table-striped">
-<thead>
-<tr><th><strong>R8:</strong>              </th><th>CREAR EQUIPO</th></tr>
-</thead>
-<tbody>
-<tr><td>Descripción          </td><td>La aplicación permitirá, a los usuarios logueados (R5), crear un equipo asociado a su cuenta.</td></tr>
+<tr><td>Descripción          </td><td>Solo podra dar de baja un usuario registrado,un administrador,ello conlleva su eliminacion de la base de datos del programa.</td></tr>
 <tr><td>Prioridad            </td><td>IMPORTANTE</td></tr>
 <tr><td>Tipo                 </td><td>Funcional</td></tr>
 <tr><td>Complejidad          </td><td>Fácil</td></tr>
 <tr><td>Entrega planificada  </td><td>v1</td></tr>
 <tr><td>Entrega realizada    </td><td>v1</td></tr>
-<tr><td>Nº issue             </td><td><a href="https://github.com/christianchf/misterfut/issues/8">8</a></td></tr>
 </tbody>
 </table>
 <hr />
 <table class="table table-bordered table-striped">
 <thead>
-<tr><th><strong>R9:</strong>              </th><th>MODIFICAR EQUIPO</th></tr>
+<tr><th><strong>R10:</strong>              </th><th>LOGIN DE USUARIO</th></tr>
 </thead>
 <tbody>
-<tr><td>Descripción          </td><td>La aplicación permitirá, a los usuarios logueados (R5), modificar los datos de los equipos asociados a su cuenta.</td></tr>
-<tr><td>Prioridad            </td><td>IMPORTANTE</td></tr>
-<tr><td>Tipo                 </td><td>Funcional</td></tr>
-<tr><td>Complejidad          </td><td>Fácil</td></tr>
-<tr><td>Entrega planificada  </td><td>v1</td></tr>
-<tr><td>Entrega realizada    </td><td>v1</td></tr>
-<tr><td>Nº issue             </td><td><a href="https://github.com/christianchf/misterfut/issues/9">9</a></td></tr>
-</tbody>
-</table>
-<hr />
-<table class="table table-bordered table-striped">
-<thead>
-<tr><th><strong>R10:</strong>              </th><th>BORRAR EQUIPO</th></tr>
-</thead>
-<tbody>
-<tr><td>Descripción          </td><td>La aplicación permitirá, a los usuarios logueados (R5), borrar un equipo asociado a su cuenta</td></tr>
+<tr><td>Descripción          </td><td>Un usuario podra loguearse en la aplicacion mediante un enlace o boton que abrira un formulario de login, en el que podra dar su nombre de usuario y su contraseña para posteriormente acceder al programa.</td></tr>
 <tr><td>Prioridad            </td><td>IMPORTANTE</td></tr>
 <tr><td>Tipo                 </td><td>Funcional</td></tr>
 <tr><td>Complejidad          </td><td>Fácil</td></tr>
@@ -207,393 +199,384 @@
 <hr />
 <table class="table table-bordered table-striped">
 <thead>
-<tr><th><strong>R11:</strong>              </th><th>VER DATOS DEL EQUIPO</th></tr>
+<tr><th><strong>R11:</strong>              </th><th>LOGOUT DE USUARIO</th></tr>
 </thead>
 <tbody>
-<tr><td>Descripción          </td><td>La aplicación permitirá, a los usuarios logueados (R5), ver los datos de los equipo asociados a su cuenta</td></tr>
+<tr><td>Descripción          </td><td>Un usuario podra desloguearse en la aplicacion mediante un boton o enlace que pulsara y posteriormente saldra del programa cargando la pagina de inicio.</td></tr>
 <tr><td>Prioridad            </td><td>IMPORTANTE</td></tr>
 <tr><td>Tipo                 </td><td>Funcional</td></tr>
 <tr><td>Complejidad          </td><td>Fácil</td></tr>
 <tr><td>Entrega planificada  </td><td>v1</td></tr>
 <tr><td>Entrega realizada    </td><td>v1</td></tr>
-<tr><td>Nº issue             </td><td><a href="https://github.com/christianchf/misterfut/issues/11">11</a></td></tr>
 </tbody>
 </table>
 <hr />
 <table class="table table-bordered table-striped">
 <thead>
-<tr><th><strong>R12:</strong>              </th><th>CREAR JUGADORES</th></tr>
+<tr><th><strong>R12:</strong>              </th><th>CREAR-DAR DE ALTA EVENTO</th></tr>
 </thead>
 <tbody>
-<tr><td>Descripción          </td><td>La aplicación permitirá, a los usuarios logueados (R5), crear jugadores asociados al equipo previamente creado (R8).</td></tr>
+<tr><td>Descripción          </td><td>Un usuario podra crear un evento que se publicara en la pagina principal de la aplicacion mediante un boton que abrira un formulario de creacion de eventos. De los eventos se proporcionara:nombre, tipo de evento,lugar, descripcion,fecha del evento,numero de votos(opcional) y foto descriptiva(opcional)</td></tr>
+<tr><td>Prioridad            </td><td>IMPORTANTE</td></tr>
+<tr><td>Tipo                 </td><td>Funcional</td></tr>
+<tr><td>Complejidad          </td><td>Facil</td></tr>
+<tr><td>Entrega planificada  </td><td>v2</td></tr>
+<tr><td>Entrega realizada    </td><td>v1</td></tr>
+
+</tbody>
+</table>
+<hr />
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th><strong>R13:</strong>              </th><th>ELIMINAR-DAR DE BAJA EVENTO</th></tr>
+</thead>
+<tbody>
+<tr><td>Descripción          </td><td>Un usuario registrado podra eliminar un evento que previamente creo causando que se elimine de la base de datos y de la pagina principal.</td></tr>
+<tr><td>Prioridad            </td><td>IMPORTANTE</td></tr>
+<tr><td>Tipo                 </td><td>Funcional</td></tr>
+<tr><td>Complejidad          </td><td>Facil</td></tr>
+<tr><td>Entrega planificada  </td><td>v2</td></tr>
+<tr><td>Entrega realizada    </td><td>v1</td></tr>
+</tbody>
+</table>
+<hr />
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th><strong>R14:</strong>              </th><th>MODIFICAR EVENTOS</th></tr>
+</thead>
+<tbody>
+<tr><td>Descripción          </td><td>Un usuario registrado podra modificar eventos.La informacion quedara guardada en la base de datos</td></tr>
+<tr><td>Prioridad            </td><td>IMPORTANTE</td></tr>
+<tr><td>Tipo                 </td><td>Funcional</td></tr>
+<tr><td>Complejidad          </td><td>Facil</td></tr>
+<tr><td>Entrega planificada  </td><td>v2</td></tr>
+<tr><td>Entrega realizada    </td><td>v1</td></tr>
+
+</tbody>
+</table>
+<hr />
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th><strong>R15:</strong>             </th><th>CONSULTA DE EVENTOS</th></tr>
+</thead>
+<tbody>
+<tr><td>Descripción          </td><td>Tanto un usuario registrado como un usuario no registrado podra consultar la informacion de los eventos desde la pagina principal.</td></tr>
+<tr><td>Prioridad            </td><td>IMPORTANTE</td></tr>
+<tr><td>Tipo                 </td><td>Funcional</td></tr>
+<tr><td>Complejidad          </td><td>Facil</td></tr>
+<tr><td>Entrega planificada  </td><td>v2</td></tr>
+<tr><td>Entrega realizada    </td><td>v1</td></tr>
+
+</tbody>
+</table>
+<hr />
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th><strong>R16:</strong>              </th><th>BUSQUEDA DE EVENTOS POR FECHA</th></tr>
+</thead>
+<tbody>
+<tr><td>Descripción          </td><td>Un usuario podra buscar eventos por su fecha mas reciente o antigua patra filtrar los eventos cronologicamente.</td></tr>
 <tr><td>Prioridad            </td><td>IMPORTANTE</td></tr>
 <tr><td>Tipo                 </td><td>Funcional</td></tr>
 <tr><td>Complejidad          </td><td>Media</td></tr>
 <tr><td>Entrega planificada  </td><td>v2</td></tr>
 <tr><td>Entrega realizada    </td><td>v1</td></tr>
-<tr><td>Nº issue             </td><td><a href="https://github.com/christianchf/misterfut/issues/19">19</a></td></tr>
 </tbody>
 </table>
 <hr />
 <table class="table table-bordered table-striped">
 <thead>
-<tr><th><strong>R13:</strong>              </th><th>MODIFICAR JUGADORES</th></tr>
+<tr><th><strong>R17:</strong>             </th><th>BUSQUEDA DE EVENTOS POR NOMBRE</th></tr>
 </thead>
 <tbody>
-<tr><td>Descripción          </td><td>La aplicación permitirá, a los usuarios logueados (R5), modificar los datos de los jugadores creados con anterioridad (R12)</td></tr>
+<tr><td>Descripción          </td><td>Un usuario podra buscar eventos por su nombre alfabeticamente y en orden ascendente o descendente.</td></tr>
 <tr><td>Prioridad            </td><td>IMPORTANTE</td></tr>
 <tr><td>Tipo                 </td><td>Funcional</td></tr>
 <tr><td>Complejidad          </td><td>Media</td></tr>
 <tr><td>Entrega planificada  </td><td>v2</td></tr>
 <tr><td>Entrega realizada    </td><td>v1</td></tr>
-<tr><td>Nº issue             </td><td><a href="https://github.com/christianchf/misterfut/issues/20">20</a></td></tr>
 </tbody>
 </table>
 <hr />
 <table class="table table-bordered table-striped">
 <thead>
-<tr><th><strong>R14:</strong>              </th><th>BORRAR JUGADORES</th></tr>
+<tr><th><strong>R18:</strong>             </th><th>BUSQUEDA DE EVENTOS CON FILTROS</th></tr>
 </thead>
 <tbody>
-<tr><td>Descripción          </td><td>La aplicación permitirá, a los usuarios logueados (R5), borrar jugadores que estén asociados a su equipo.</td></tr>
-<tr><td>Prioridad            </td><td>IMPORTANTE</td></tr>
-<tr><td>Tipo                 </td><td>Funcional</td></tr>
-<tr><td>Complejidad          </td><td>Media</td></tr>
-<tr><td>Entrega planificada  </td><td>v2</td></tr>
-<tr><td>Entrega realizada    </td><td>v1</td></tr>
-<tr><td>Nº issue             </td><td><a href="https://github.com/christianchf/misterfut/issues/21">21</a></td></tr>
-</tbody>
-</table>
-<hr />
-<table class="table table-bordered table-striped">
-<thead>
-<tr><th><strong>R15:</strong>             </th><th>VER DATOS DE LOS JUGADORES</th></tr>
-</thead>
-<tbody>
-<tr><td>Descripción          </td><td>La aplicación permitirá, a los usuarios logueados (R5), ver los datos de los jugadores, creados con anterioridad (R12), que estén asociados a su equipo.</td></tr>
-<tr><td>Prioridad            </td><td>IMPORTANTE</td></tr>
-<tr><td>Tipo                 </td><td>Funcional</td></tr>
-<tr><td>Complejidad          </td><td>Media</td></tr>
-<tr><td>Entrega planificada  </td><td>v2</td></tr>
-<tr><td>Entrega realizada    </td><td>v1</td></tr>
-<tr><td>Nº issue             </td><td><a href="https://github.com/christianchf/misterfut/issues/22">22</a></td></tr>
-</tbody>
-</table>
-<hr />
-<table class="table table-bordered table-striped">
-<thead>
-<tr><th><strong>R16:</strong>              </th><th>CREAR EVENTOS</th></tr>
-</thead>
-<tbody>
-<tr><td>Descripción          </td><td>La aplicación permitirá, a los usuarios logueados (R5), crear eventos con una fecha a través de un calendario interactivo.</td></tr>
+<tr><td>Descripción          </td><td>Un usuario podra buscar eventos filtrando por su tipo,nombre,fecha,lugar...etc</td></tr>
 <tr><td>Prioridad            </td><td>IMPORTANTE</td></tr>
 <tr><td>Tipo                 </td><td>Funcional</td></tr>
 <tr><td>Complejidad          </td><td>Difícil</td></tr>
-<tr><td>Entrega planificada  </td><td>v3</td></tr>
-<tr><td>Entrega realizada    </td><td>v2</td></tr>
-<tr><td>Nº issue             </td><td><a href="https://github.com/christianchf/misterfut/issues/28">28</a></td></tr>
-</tbody>
-</table>
-<hr />
-<table class="table table-bordered table-striped">
-<thead>
-<tr><th><strong>R17:</strong>             </th><th>MODIFICAR EVENTOS</th></tr>
-</thead>
-<tbody>
-<tr><td>Descripción          </td><td>La aplicación permitirá, a los usuarios logueados (R5), modificar los datos de los eventos previamente creados (R16).</td></tr>
-<tr><td>Prioridad            </td><td>IMPORTANTE</td></tr>
-<tr><td>Tipo                 </td><td>Funcional</td></tr>
-<tr><td>Complejidad          </td><td>Difícil</td></tr>
-<tr><td>Entrega planificada  </td><td>v3</td></tr>
-<tr><td>Entrega realizada    </td><td>v2</td></tr>
-<tr><td>Nº issue             </td><td><a href="https://github.com/christianchf/misterfut/issues/29">29</a></td></tr>
-</tbody>
-</table>
-<hr />
-<table class="table table-bordered table-striped">
-<thead>
-<tr><th><strong>R18:</strong>             </th><th>BORRAR EVENTOS</th></tr>
-</thead>
-<tbody>
-<tr><td>Descripción          </td><td>La aplicación permitirá, a los usuarios loguados (R5), borrar los eventos creados por él.</td></tr>
-<tr><td>Prioridad            </td><td>IMPORTANTE</td></tr>
-<tr><td>Tipo                 </td><td>Funcional</td></tr>
-<tr><td>Complejidad          </td><td>Difícil</td></tr>
-<tr><td>Entrega planificada  </td><td>v3</td></tr>
-<tr><td>Entrega realizada    </td><td>v2</td></tr>
+<tr><td>Entrega planificada  </td><td>v2</td></tr>
+<tr><td>Entrega realizada    </td><td>v1</td></tr>
 <tr><td>Nº issue             </td><td><a href="https://github.com/christianchf/misterfut/issues/30">30</a></td></tr>
 </tbody>
 </table>
 <hr />
 <table class="table table-bordered table-striped">
 <thead>
-<tr><th><strong>R19:</strong>             </th><th>CALENDARIO INTERACTIVO</th></tr>
+<tr><th><strong>R19:</strong>             </th><th>MAPA DE LOCALIZACION DE EVENTO(GEOLOCALIZACION)</th></tr>
 </thead>
 <tbody>
-<tr><td>Descripción          </td><td>La aplicación permitirá, a los usuarios logueados (R5), la manipulación de todos los eventos a través de un calendario interactivo.</td></tr>
-<tr><td>Prioridad            </td><td>IMPORTANTE</td></tr>
+<tr><td>Descripción          </td><td>Se proporcionara en la pagina principal un mapa con la localizacion de todos los eventos creados por los usuarios.Para ello habra que investigar la manera de marcar esos puntos de localizacion en un mapa de la localidad o del pais.</td></tr>
+<tr><td>Prioridad            </td><td>OPCIONAL</td></tr>
 <tr><td>Tipo                 </td><td>Funcional</td></tr>
-<tr><td>Complejidad          </td><td>Difícil</td></tr>
-<tr><td>Entrega planificada  </td><td>v3</td></tr>
-<tr><td>Entrega realizada    </td><td>v3</td></tr>
+<tr><td>Complejidad          </td><td>Media</td></tr>
+<tr><td>Entrega planificada  </td><td>v2</td></tr>
+<tr><td>Entrega realizada    </td><td>v1</td></tr>
 <tr><td>Nº issue             </td><td><a href="https://github.com/christianchf/misterfut/issues/31">31</a></td></tr>
 </tbody>
 </table>
 <hr />
 <table class="table table-bordered table-striped">
 <thead>
-<tr><th><strong>R20:</strong>             </th><th>ARRASTRAR EVENTOS</th></tr>
+<tr><th><strong>R20:</strong>             </th><th>OPCION DE VOTAR UN EVENTO</th></tr>
 </thead>
 <tbody>
-<tr><td>Descripción          </td><td>La aplicación permitirá, a los usuarios logueados (R5), modificar la fecha de los eventos con solo arrastrar el evento deseado de la fecha actual a la nueva fecha.</td></tr>
-<tr><td>Prioridad            </td><td>IMPORTANTE</td></tr>
+<tr><td>Descripción          </td><td>Se proporcionara al lado del evento un boton que permita votarlo y un contador que nos indique el numero de votos del evento.</td></tr>
+<tr><td>Prioridad            </td><td>OPCIONAL</td></tr>
 <tr><td>Tipo                 </td><td>Funcional</td></tr>
-<tr><td>Complejidad          </td><td>Difícil</td></tr>
-<tr><td>Entrega planificada  </td><td>v3</td></tr>
-<tr><td>Entrega realizada    </td><td>v3</td></tr>
+<tr><td>Complejidad          </td><td>Media</td></tr>
+<tr><td>Entrega planificada  </td><td>v2</td></tr>
+<tr><td>Entrega realizada    </td><td>v1</td></tr>
 <tr><td>Nº issue             </td><td><a href="https://github.com/christianchf/misterfut/issues/32">32</a></td></tr>
 </tbody>
 </table>
 <hr />
 <table class="table table-bordered table-striped">
 <thead>
-<tr><th><strong>R21:</strong>             </th><th>VER EVENTOS</th></tr>
+<tr><th><strong>R21:</strong>             </th><th>CREAR UN COMENTARIO DE UN EVENTO</th></tr>
 </thead>
 <tbody>
-<tr><td>Descripción          </td><td>La aplicación permitirá, a los usuarios logueados (R5), ver los datos de los eventos previamente creados por él (R16).</td></tr>
+<tr><td>Descripción          </td><td>Un usuario registrado podra escribir un comentario sobre un evento.Quedando almacenado en la base de datos del programa.</td></tr>
 <tr><td>Prioridad            </td><td>IMPORTANTE</td></tr>
 <tr><td>Tipo                 </td><td>Funcional</td></tr>
 <tr><td>Complejidad          </td><td>Difícil</td></tr>
 <tr><td>Entrega planificada  </td><td>v3</td></tr>
-<tr><td>Entrega realizada    </td><td>v2</td></tr>
-<tr><td>Nº issue             </td><td><a href="https://github.com/christianchf/misterfut/issues/33">33</a></td></tr>
+<tr><td>Entrega realizada    </td><td>v1</td></tr>
+
 </tbody>
 </table>
 <hr />
 <table class="table table-bordered table-striped">
 <thead>
-<tr><th><strong>R22:</strong>             </th><th>CREAR EJERCICIOS</th></tr>
+<tr><th><strong>R22:</strong>             </th><th>ELIMINAR UN COMENTARIO DE UN EVENTO</th></tr>
 </thead>
 <tbody>
-<tr><td>Descripción          </td><td>La aplicación permitirá, a los usuarios logueados (R5), crear ejercicios de entrenamientos y planteamientos tácticos con la descripción de dicho ejercicio.</td></tr>
-<tr><td>Prioridad            </td><td>OPCIONAL</td></tr>
-<tr><td>Tipo                 </td><td>Funcional</td></tr>
-<tr><td>Complejidad          </td><td>Fácil</td></tr>
-<tr><td>Entrega planificada  </td><td>v3</td></tr>
-<tr><td>Entrega realizada    </td><td>v3</td></tr>
-<tr><td>Nº issue             </td><td><a href="https://github.com/christianchf/misterfut/issues/34">34</a></td></tr>
-</tbody>
-</table>
-<hr />
-<table class="table table-bordered table-striped">
-<thead>
-<tr><th><strong>R23:</strong>             </th><th>MODIFICAR EJERCICIOS</th></tr>
-</thead>
-<tbody>
-<tr><td>Descripción          </td><td>La aplicación permitirá, a los usuarios logueados (R5), modificar los datos de los ejercicios creados con anterioridad (R20).</td></tr>
-<tr><td>Prioridad            </td><td>OPCIONAL</td></tr>
-<tr><td>Tipo                 </td><td>Funcional</td></tr>
-<tr><td>Complejidad          </td><td>Fácil</td></tr>
-<tr><td>Entrega planificada  </td><td>v3</td></tr>
-<tr><td>Entrega realizada    </td><td>v3</td></tr>
-<tr><td>Nº issue             </td><td><a href="https://github.com/christianchf/misterfut/issues/35">35</a></td></tr>
-</tbody>
-</table>
-<hr />
-<table class="table table-bordered table-striped">
-<thead>
-<tr><th><strong>R24:</strong>             </th><th>BORRAR EJERCICIOS</th></tr>
-</thead>
-<tbody>
-<tr><td>Descripción          </td><td>La aplicación permitirá, a los usuarios logueados (R5), borrar los ejercicios creados por él.</td></tr>
-<tr><td>Prioridad            </td><td>OPCIONAL</td></tr>
-<tr><td>Tipo                 </td><td>Funcional</td></tr>
-<tr><td>Complejidad          </td><td>Fácil</td></tr>
-<tr><td>Entrega planificada  </td><td>v3</td></tr>
-<tr><td>Entrega realizada    </td><td>v3</td></tr>
-<tr><td>Nº issue             </td><td><a href="https://github.com/christianchf/misterfut/issues/36">36</a></td></tr>
-</tbody>
-</table>
-<hr />
-<table class="table table-bordered table-striped">
-<thead>
-<tr><th><strong>R25:</strong>             </th><th>VER DATOS DE LOS EJERCICIOS</th></tr>
-</thead>
-<tbody>
-<tr><td>Descripción          </td><td>La aplicación permitirá, a los usuarios logueados (R5), ver los datos de los ejercicios creados por él.</td></tr>
-<tr><td>Prioridad            </td><td>OPCIONAL</td></tr>
-<tr><td>Tipo                 </td><td>Funcional</td></tr>
-<tr><td>Complejidad          </td><td>Fácil</td></tr>
-<tr><td>Entrega planificada  </td><td>v3</td></tr>
-<tr><td>Entrega realizada    </td><td>v3</td></tr>
-<tr><td>Nº issue             </td><td><a href="https://github.com/christianchf/misterfut/issues/37">37</a></td></tr>
-</tbody>
-</table>
-<hr />
-<table class="table table-bordered table-striped">
-<thead>
-<tr><th><strong>R26:</strong>             </th><th>GENERAR PDF DEL CALENDARIO</th></tr>
-</thead>
-<tbody>
-<tr><td>Descripción          </td><td>La aplicación permitirá, a los usuarios logueados (R5), generar un documento PDF del calendario de eventos previamente creado (R16).</td></tr>
-<tr><td>Prioridad            </td><td>OPCIONAL</td></tr>
-<tr><td>Tipo                 </td><td>Funcional</td></tr>
-<tr><td>Complejidad          </td><td>Difícil</td></tr>
-<tr><td>Entrega planificada  </td><td>v3</td></tr>
-<tr><td>Entrega realizada    </td><td>v3</td></tr>
-<tr><td>Nº issue             </td><td><a href="https://github.com/christianchf/misterfut/issues/38">38</a></td></tr>
-</tbody>
-</table>
-<hr />
-<table class="table table-bordered table-striped">
-<thead>
-<tr><th><strong>R27:</strong>             </th><th>ENVIAR CORREO</th></tr>
-</thead>
-<tbody>
-<tr><td>Descripción          </td><td>La aplicación permitirá, a cualquier usuario, enviar un correo sobre consultas o sugerencias, a través de un formulario de contacto.</td></tr>
+<tr><td>Descripción          </td><td>El usuario podra eliminar comentarios sobre un evento.Quedando eliminado de la base de datos.</td></tr>
 <tr><td>Prioridad            </td><td>IMPORTANTE</td></tr>
 <tr><td>Tipo                 </td><td>Funcional</td></tr>
 <tr><td>Complejidad          </td><td>Fácil</td></tr>
-<tr><td>Entrega planificada  </td><td>v2</td></tr>
+<tr><td>Entrega planificada  </td><td>v3</td></tr>
 <tr><td>Entrega realizada    </td><td>v1</td></tr>
-<tr><td>Nº issue             </td><td><a href="https://github.com/christianchf/misterfut/issues/23">23</a></td></tr>
+
 </tbody>
 </table>
 <hr />
 <table class="table table-bordered table-striped">
 <thead>
-<tr><th><strong>R51:</strong>             </th><th>GUARDAR VARIABLE DE SESIÓN EN LA BASE DE DATOS</th></tr>
+<tr><th><strong>R23:</strong>             </th><th>MODIFICAR UN COMENTARIO DE UN EVENTO</th></tr>
 </thead>
 <tbody>
-<tr><td>Descripción          </td><td>La aplicación guardara las variables de sesión en la base de datos.</td></tr>
-<tr><td>Prioridad            </td><td>OPCIONAL</td></tr>
-<tr><td>Tipo                 </td><td>Técnico</td></tr>
-<tr><td>Complejidad          </td><td>Media</td></tr>
-<tr><td>Entrega planificada  </td><td>v1</td></tr>
+<tr><td>Descripción          </td><td>Un usuario resgistrado podra modificar su comentario su un evento.Quedando modificado en la base de datos del programa</td></tr>
+<tr><td>Prioridad            </td><td>IMPORTANTE</td></tr>
+<tr><td>Tipo                 </td><td>Funcional</td></tr>
+<tr><td>Complejidad          </td><td>Fácil</td></tr>
+<tr><td>Entrega planificada  </td><td>v3</td></tr>
 <tr><td>Entrega realizada    </td><td>v1</td></tr>
-<tr><td>Nº issue             </td><td><a href="https://github.com/christianchf/misterfut/issues/17">17</a></td></tr>
 </tbody>
 </table>
 <hr />
 <table class="table table-bordered table-striped">
 <thead>
-<tr><th><strong>R52:</strong>             </th><th>HISTORIAL DE EQUIPOS</th></tr>
+<tr><th><strong>R24:</strong>             </th><th>CONSULTAR COMENTARIOS DE UN EVENTO</th></tr>
 </thead>
 <tbody>
-<tr><td>Descripción          </td><td>La aplicación permitirá, a los usuarios logueados (R5), ver un historial de todos los equipos que ha entrenado, independientemente del número de temporadas que haya estado entrenando a cada equipo.</td></tr>
-<tr><td>Prioridad            </td><td>OPCIONAL</td></tr>
+<tr><td>Descripción          </td><td>Los usuarios podran consultar comentarios sobre un evento</td></tr>
+<tr><td>Prioridad            </td><td>IMPORTANTE</td></tr>
 <tr><td>Tipo                 </td><td>Funcional</td></tr>
-<tr><td>Complejidad          </td><td>Media</td></tr>
-<tr><td>Entrega planificada  </td><td>v2</td></tr>
-<tr><td>Entrega realizada    </td><td>v2</td></tr>
-<tr><td>Nº issue             </td><td><a href="https://github.com/christianchf/misterfut/issues/52">52</a></td></tr>
+<tr><td>Complejidad          </td><td>Fácil</td></tr>
+<tr><td>Entrega planificada  </td><td>v3</td></tr>
+<tr><td>Entrega realizada    </td><td>v1</td></tr>
 </tbody>
 </table>
 <hr />
 <table class="table table-bordered table-striped">
 <thead>
-<tr><th><strong>R53:</strong>             </th><th>REGISTRO HISTÓRICO DE TEMPORADAS</th></tr>
+<tr><th><strong>R25:</strong>             </th><th>PASAR EVENTOS A DOCUMENTO PDF</th></tr>
 </thead>
 <tbody>
-<tr><td>Descripción          </td><td>La aplicación permitirá, a los usuarios logueados (R5), ver un registro histórico de las estadísticas por temporada de cada uno de sus equipo.</td></tr>
-<tr><td>Prioridad            </td><td>OPCIONAL</td></tr>
-<tr><td>Tipo                 </td><td>Funcional</td></tr>
-<tr><td>Complejidad          </td><td>Media</td></tr>
-<tr><td>Entrega planificada  </td><td>v2</td></tr>
-<tr><td>Entrega realizada    </td><td>v2</td></tr>
-<tr><td>Nº issue             </td><td><a href="https://github.com/christianchf/misterfut/issues/53">53</a></td></tr>
-</tbody>
-</table>
-<hr />
-<table class="table table-bordered table-striped">
-<thead>
-<tr><th><strong>R54:</strong>             </th><th>TRASPASAR JUGADORES</th></tr>
-</thead>
-<tbody>
-<tr><td>Descripción          </td><td>La aplicación permitirá, a los usuarios logueados (R5), realizar un traspaso masivo de toda la plantilla de uno de los equipos del usuario logueado a otro de los equipos del mismo.</td></tr>
-<tr><td>Prioridad            </td><td>OPCIONAL</td></tr>
-<tr><td>Tipo                 </td><td>Funcional</td></tr>
-<tr><td>Complejidad          </td><td>Difícil</td></tr>
-<tr><td>Entrega planificada  </td><td>v2</td></tr>
-<tr><td>Entrega realizada    </td><td>v2</td></tr>
-<tr><td>Nº issue             </td><td><a href="https://github.com/christianchf/misterfut/issues/54">54</a></td></tr>
-</tbody>
-</table>
-<hr />
-<table class="table table-bordered table-striped">
-<thead>
-<tr><th><strong>R55:</strong>             </th><th>RECUPERAR CONTRASEÑA</th></tr>
-</thead>
-<tbody>
-<tr><td>Descripción          </td><td>La aplicación permitirá a los usuarios que estén registrados (R1) la opción de recuperar su contraseña, mediante su correo electrónico, si la han olvidado.</td></tr>
-<tr><td>Prioridad            </td><td>OPCIONAL</td></tr>
-<tr><td>Tipo                 </td><td>Funcional</td></tr>
-<tr><td>Complejidad          </td><td>Difícil</td></tr>
-<tr><td>Entrega planificada  </td><td>v2</td></tr>
-<tr><td>Entrega realizada    </td><td>v2</td></tr>
-<tr><td>Nº issue             </td><td><a href="https://github.com/christianchf/misterfut/issues/55">55</a></td></tr>
-</tbody>
-</table>
-<hr />
-<table class="table table-bordered table-striped">
-<thead>
-<tr><th><strong>R56:</strong>             </th><th>LISTA DE LESIONADOS</th></tr>
-</thead>
-<tbody>
-<tr><td>Descripción          </td><td>La aplicación permitirá a los usuarios logueados (R5), ver un listado de los jugadores de su equipo que están lesionados.</td></tr>
-<tr><td>Prioridad            </td><td>OPCIONAL</td></tr>
-<tr><td>Tipo                 </td><td>Funcional</td></tr>
-<tr><td>Complejidad          </td><td>Media</td></tr>
-<tr><td>Entrega planificada  </td><td>v2</td></tr>
-<tr><td>Entrega realizada    </td><td>v2</td></tr>
-<tr><td>Nº issue             </td><td><a href="https://github.com/christianchf/misterfut/issues/56">56</a></td></tr>
-</tbody>
-</table>
-<hr />
-<table class="table table-bordered table-striped">
-<thead>
-<tr><th><strong>R57:</strong>             </th><th>AÑADIR NUEVA TEMPORADA A UN EQUIPO</th></tr>
-</thead>
-<tbody>
-<tr><td>Descripción          </td><td>La aplicación permitirá, a los usuarios logueados (R5), añadir una nueva temporada a un equipo para mantener los datos del equipo en cada temporada.</td></tr>
-<tr><td>Prioridad            </td><td>OPCIONAL</td></tr>
-<tr><td>Tipo                 </td><td>Funcional</td></tr>
-<tr><td>Complejidad          </td><td>Difícil</td></tr>
-<tr><td>Entrega planificada  </td><td>v2</td></tr>
-<tr><td>Entrega realizada    </td><td>v2</td></tr>
-<tr><td>Nº issue             </td><td><a href="https://github.com/christianchf/misterfut/issues/57">57</a></td></tr>
-</tbody>
-</table>
-<hr />
-<table class="table table-bordered table-striped">
-<thead>
-<tr><th><strong>R58:</strong>             </th><th>LISTA DE SANCIONADOS</th></tr>
-</thead>
-<tbody>
-<tr><td>Descripción          </td><td>La aplicación permitirá, a los usuarios logueados (R5), ver un listado de los jugadores de su equipo que están sancionados.</td></tr>
+<tr><td>Descripción          </td><td>Un usuario resgistrado podra pasar un evento a un documento PDF.</td></tr>
 <tr><td>Prioridad            </td><td>OPCIONAL</td></tr>
 <tr><td>Tipo                 </td><td>Funcional</td></tr>
 <tr><td>Complejidad          </td><td>Media</td></tr>
 <tr><td>Entrega planificada  </td><td>v3</td></tr>
-<tr><td>Entrega realizada    </td><td>v3</td></tr>
-<tr><td>Nº issue             </td><td><a href="https://github.com/christianchf/misterfut/issues/58">58</a></td></tr>
+<tr><td>Entrega realizada    </td><td>v1</td></tr>
+
 </tbody>
 </table>
 <hr />
 <table class="table table-bordered table-striped">
 <thead>
-<tr><th><strong>R59:</strong>             </th><th>REGISTRO DE EVENTOS</th></tr>
+<tr><th><strong>R26:</strong>             </th><th>MARCAR EVENTOS EN UN CALENDARIO</th></tr>
 </thead>
 <tbody>
-<tr><td>Descripción          </td><td>Todos los usuarios, que estén logueados (R5), podrán ver un registro de los eventos del equipo en el que se encuentran.</td></tr>
-<tr><td>Prioridad            </td><td>OPCIONAL</td></tr>
+<tr><td>Descripción          </td><td>Investigar y buscar la forma con lo que marcar los eventos de un usuario en un calendario.</td></tr>
+<tr><td>Prioridad            </td><td>IMPORTANTE</td></tr>
 <tr><td>Tipo                 </td><td>Funcional</td></tr>
-<tr><td>Complejidad          </td><td>Media</td></tr>
+<tr><td>Complejidad          </td><td>Difícil</td></tr>
 <tr><td>Entrega planificada  </td><td>v3</td></tr>
-<tr><td>Entrega realizada    </td><td>v3</td></tr>
-<tr><td>Nº issue             </td><td><a href="https://github.com/christianchf/misterfut/issues/59">59</a></td></tr>
+<tr><td>Entrega realizada    </td><td>v1</td></tr>
+
 </tbody>
 </table>
+<hr />
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th><strong>R27:</strong>             </th><th>VALIDACION DE CAMPOS DE FORMULARIOS</th></tr>
+</thead>
+<tbody>
+<tr><td>Descripción          </td><td>Validacion de campos de los formularios.</td></tr>
+<tr><td>Prioridad            </td><td>MINIMO</td></tr>
+<tr><td>Tipo                 </td><td>Funcional</td></tr>
+
+</tbody>
+</table>
+<hr />
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th><strong>R28:</strong>             </th><th>GESTION DE VENTANAS</th></tr>
+</thead>
+<tbody>
+<tr><td>Descripción          </td><td>Gestion de ventanas(Gestion de la apariencia de las ventanas.Creacion de nuevas ventanas y comunicacion entre ventanas.)</td></tr>
+<tr><td>Prioridad            </td><td>MINIMO</td></tr>
+<tr><td>Tipo                 </td><td>Funcional</td></tr>
+
+</tbody>
+</table>
+<hr />
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th><strong>R29:</strong>             </th><th>INTERACTIVIDAD MEDIANTE MECANISMOS DE MANEJO DE EVENTOS</th></tr>
+</thead>
+<tbody>
+<tr><td>Descripción          </td><td>Interactividad a traves de mecanismos de manejo de eventos intuitivos y eficaces.</td></tr>
+<tr><td>Prioridad            </td><td>MINIMO</td></tr>
+<tr><td>Tipo                 </td><td>Funcional</td></tr>
+<tr><td>Complejidad          </td><td>Media</td></tr>
+
+</tbody>
+</table>
+<hr />
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th><strong>R30:</strong>             </th><th>USO Y MANIPULACION DOM </th></tr>
+</thead>
+<tbody>
+<tr><td>Descripción          </td><td>Uso y manipulacion de las caracteristicas del modelo de objetos del documento(DOM)</td></tr>
+<tr><td>Prioridad            </td><td>MINIMO</td></tr>
+<tr><td>Tipo                 </td><td>Funcional</td></tr>
+
+</tbody>
+</table>
+<hr />
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th><strong>R31:</strong>             </th><th>USO DE MECANISMOS DE ALMACENAMIENTO EN EL NAVEGADOR.</th></tr>
+</thead>
+<tbody>
+<tr><td>Descripción          </td><td>Uso de mecanismos de almacenamiento en el lado del cliente.</td></tr>
+<tr><td>Prioridad            </td><td>MINIMO</td></tr>
+<tr><td>Tipo                 </td><td>Funcional</td></tr>
+</tbody>
+</table>
+<hr />
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th><strong>R32:</strong>             </th><th>USO DE JQUERY</th></tr>
+</thead>
+<tbody>
+<tr><td>Descripción          </td><td>Uso de la libreria Jquery para la realizacion de la aplicaion web</td></tr>
+<tr><td>Prioridad            </td><td>MINIMO</td></tr>
+<tr><td>Tipo                 </td><td>Funcional</td></tr>
+
+</tbody>
+</table>
+<hr />
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th><strong>R33:</strong>             </th><th>INCLUIR UN PLUGIN EN LA APLICACION</th></tr>
+</thead>
+<tbody>
+<tr><td>Descripción          </td><td>Incluir al menos un plugin no trabajado en clase en la aplicacion web.</td></tr>
+<tr><td>Prioridad            </td><td>MINIMO</td></tr>
+<tr><td>Tipo                 </td><td>Funcional</td></tr>
+
+</tbody>
+</table>
+<hr />
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th><strong>R34:</strong>             </th><th>UTILIZACION DE AJAX</th></tr>
+</thead>
+<tbody>
+<tr><td>Descripción          </td><td>Utilizacion de mecanismos de comunicacion asincrona AJAX</td></tr>
+<tr><td>Prioridad            </td><td>MINIMO</td></tr>
+<tr><td>Tipo                 </td><td>Funcional</td></tr>
+</tbody>
+</table>
+<hr />
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th><strong>R35:</strong>             </th><th>Uso de PHP V.7</th></tr>
+</thead>
+<tbody>
+<tr><td>Descripción          </td><td>Uso de php V.7 para la realizacion de la aplicacion</td></tr>
+<tr><td>Prioridad            </td><td>MINIMO</td></tr>
+<tr><td>Tipo                 </td><td>Funcional</td></tr>
+</tbody>
+</table>
+<hr />
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th><strong>R36:</strong>             </th><th>YII FRAMEWORK 2.0.10</th></tr>
+</thead>
+<tbody>
+<tr><td>Descripción          </td><td>Uso del framework Yii 2.0.10 o superior </td></tr>
+<tr><td>Prioridad            </td><td>MINIMO</td></tr>
+<tr><td>Tipo                 </td><td>Funcional</td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th><strong>R37:</strong>             </th><th>DESPLIEGUE DE LA APLICACION EN HEROKU</th></tr>
+</thead>
+<tbody>
+<tr><td>Descripción          </td><td>Despliegue de la aplicacion en la plataforma web Heroku.</td></tr>
+<tr><td>Prioridad            </td><td>MINIMO</td></tr>
+<tr><td>Tipo                 </td><td>Funcional</td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th><strong>R38:</strong>             </th><th>PRUEBAS FUNCIONALES/ACEPTACION CODECEPTION</th></tr>
+</thead>
+<tbody>
+<tr><td>Descripción          </td><td>Pruebas funcionales y/o aceptacion con la herramienta web CodeCeption</td></tr>
+<tr><td>Prioridad            </td><td>MINIMO</td></tr>
+<tr><td>Tipo                 </td><td>Funcional</td></tr>
+</tbody>
+</table>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th><strong>R39:</strong>             </th><th>VALIDAR CODIGO FUENTE CON CODE CLIMATE</th></tr>
+</thead>
+<tbody>
+<tr><td>Descripción          </td><td>Validar el estilo y la manejabilidad del codigo fuente con la herramienta web code climate.</td></tr>
+<tr><td>Prioridad            </td><td>MINIMO</td></tr>
+<tr><td>Tipo                 </td><td>Funcional</td></tr>
+</tbody>
+</table>       
         <div class="toplink"><a href="#" class="h1" title="go to top"><span class="glyphicon glyphicon-arrow-up"></a></div>
     </div>
 </div>

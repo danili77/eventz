@@ -44,7 +44,7 @@ Conclusiones
 
 Anexos
 ------------
-*   [Anexo I: Prueba Jacob nielsen](prueba-jacob.md)
+*   [Anexo I: Prueba Jacob Nielsen](prueba-jacob.md)
 *   [Anexo II: Validación CSS](validacion-css.md)
 *   [Anexo III: Validación HTML](validacion-html.md)
 *   [Anexo IV: Validación accesibilidad](validacion-accesibilidad.md)

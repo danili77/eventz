@@ -57,10 +57,13 @@ class ComentariosController extends Controller
     {
         $searchModel = new ComentarioSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
+        $usuarios = Usuario::find('id=$model->id')->select('nombre, id')->orderBy('nombre')->indexBy('id')->column();
+        $eventos = Evento::find('id=$model->id')->select('nombre, id')->orderBy('nombre')->indexBy('id')->column();
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
+            'usuarios' => $usuarios,
+            'eventos' => $eventos,
         ]);
     }
 
@@ -89,8 +92,12 @@ class ComentariosController extends Controller
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
+          $usuarios = Usuario::find('id=$model->id')->select('nombre, id')->orderBy('nombre')->indexBy('id')->column();
+          $eventos = Evento::find('id=$model->id')->select('nombre, id')->orderBy('nombre')->indexBy('id')->column();
             return $this->render('create', [
                 'model' => $model,
+                'usuarios' => $usuarios,
+                'eventos' => $eventos,
             ]);
         }
     }
@@ -109,8 +116,12 @@ class ComentariosController extends Controller
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
+            $usuarios = Usuario::find('id=$model->id')->select('nombre, id')->orderBy('nombre')->indexBy('id')->column();
+            $eventos = Evento::find('id=$model->id')->select('nombre, id')->orderBy('nombre')->indexBy('id')->column();
             return $this->render('update', [
                 'model' => $model,
+                'usuarios' =>$usuarios,
+                'eventos' => $eventos,
             ]);
         }
     }

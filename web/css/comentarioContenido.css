@@ -18,11 +18,10 @@ table a:nth-child(1),table a:nth-child(2),table a:nth-child(3)
     width:100px;
 }
 
-td a
+td a.btnsAction
 {
   display:flex;
-  flex-direction:row;
-
+  flex-direction:column;
 }
 
 .btnVolver

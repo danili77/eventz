@@ -1,7 +1,10 @@
 <?php
 
 use yii\helpers\Html;
-use yii\grid\GridView;
+use kartik\grid\GridView;
+use kartik\date\DatePicker;
+use app\models\Evento;
+use app\assets\ComentarioAsset;
 
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\ComentarioSearch */
@@ -9,6 +12,7 @@ use yii\grid\GridView;
 
 $this->title = 'Comentarios';
 $this->params['breadcrumbs'][] = $this->title;
+ComentarioAsset::register($this);
 ?>
 <div class="comentario-index">
 
@@ -18,17 +22,83 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>
         <?= Html::a('Crear Comentario', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
+
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
+        'resizableColumns' => false,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-            'texto_comentario',
-            'fecha:datetime',
-            'eventos_id',
-            'usuarios_id',
+            [
+                'label' => 'Texto Comentario',
+                'attribute' => 'texto_comentario',
+                'group' => true,
+                'width' => '110px',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            ],
+            [
+                'label' => 'Fecha',
+                'value' => 'fecha',
+                'filter' => DatePicker::widget([
+                    'model' => $searchModel,
+                    'attribute' => 'fecha',
+                    'pluginOptions' => [
+                        'autoclose'=>true,
+                        'format' => 'yyyy-mm-dd',
+                    ],
+                    'readonly' => true,
+                ]),
+                'attribute' => 'fecha',
+                'format' => 'date',
+                'width' => '100px',
+            ],
+            [
+                'label' => 'Usuarios',
+                'attribute' => 'usuarios_id',
+                'value' => 'usuarios.nombre',
+                'group' => true,
+                'width' => '110px',
+                'filterType' => GridView::FILTER_SELECT2,
+                'filter' => $usuarios,
+                'filterWidgetOptions'=>[
+                    'pluginOptions'=>['allowClear'=>true],
+                ],
+                'filterInputOptions'=>['placeholder'=>'Usuarios'],
+            ],
+
+            [
+                'class' => 'yii\grid\ActionColumn',
+                'template' => '{view} {update} {delete}',
+                'buttons' => [
+                    'view' => function ($url, $model, $key) {
+                        return Html::a('Ver', [
+                            'comentarios/view', 'id' => Html::encode($model->id),
+                        ], [
+                            'class' => 'btn btn-xs btn-info btnsAction'
+                        ]);
+                    },
+                    'update' => function ($url, $model, $key) {
+                        return Html::a('Modificar', [
+                            'comentarios/update', 'id' => Html::encode($model->id),
+                        ], [
+                            'class' => 'btn btn-xs btn-warning btnsAction'
+                        ]);
+                    },
+                    'delete' => function ($url, $model, $key) {
+                        return Html::a('Eliminar', [
+                            'comentarios/delete', 'id' => Html::encode($model->id),
+                        ], [
+                            'class' => 'btn btn-xs btn-danger btnsAction',
+                            'data' => [
+                                'confirm' => '¿Estás seguro de eliminar este evento?',
+                                'method' => 'post',
+                            ],
+                        ]);
+                    },
+                ],
+            ],
         ],
+        'responsive'=>true,
+        'hover'=>true,
     ]); ?>
 </div>

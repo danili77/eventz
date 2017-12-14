@@ -20,9 +20,10 @@ use yii\jui\DatePicker;
       'language' =>'es',
     ]) ?>
 
-    <?= $form->field($model, 'eventos_id')->textInput() ?>
+    <?= $form->field($model, 'eventos_id')->textInput()->dropDownList($eventos) ?>
 
-    <?= $form->field($model, 'usuarios_id')->textInput() ?>
+    <?= $form->field($model, 'usuarios_id')->textInput(['readonly' => true])->dropDownList($usuarios) ?>
+
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Crear' : 'Modificar', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

@@ -13,7 +13,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="comentario-view">
 
-    <h1>Comentario: <?= Html::encode($this->title) ?></h1>
+    <h1>Comentario: <?= Html::encode($model->texto_comentario) ?></h1>
 
     <p>
         <?= Html::a('Modificar', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
@@ -30,16 +30,9 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'texto_comentario',
-            'fecha:datetime',
-            'eventos_id',
-            'usuarios_id',
+            'fecha:date',
+            'usuarios.nombre',
         ],
     ]) ?>
-
-    <?= Html::a(
-      'Volver',
-      ['../comentarios/index'],
-      ['class' => 'btn btn-success btnVolver']
-    ); ?>
 
 </div>

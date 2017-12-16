@@ -49,7 +49,8 @@ video {
   list-style-image: url("/imagenes/logoLista.ico");
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 800px)
+{
     section div {
         flex-direction: column;
     }
@@ -62,6 +63,17 @@ video {
     {
       display:none;
     }
+}
 
+@media screen and (max-width: 400px)
+{
+    section article:nth-child(2)
+    {
+      display:none;
+    }
 
+   #botonR
+   {
+     display:none;
+   }
 }

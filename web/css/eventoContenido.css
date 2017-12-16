@@ -29,3 +29,22 @@ td a
 {
   float:right;
 }
+
+@media screen and (max-width: 800px) {
+    .btnVolver
+    {
+      float:left;
+    }
+
+    td a
+    {
+      flex-direction:column;
+    }
+}
+
+@media screen and (max-width: 400px) {
+  #botonR
+  {
+    display:none;
+  }
+}

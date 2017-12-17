@@ -4,13 +4,32 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\jui\DatePicker;
 use \app\models\TipoEvento;
-
-
-//$tipos = TipoEvento::find()->select('tipo, id')->orderBy('tipo')->indexBy('id')->column();
+use yii\helpers\Url;
+use yii\web\View;
+use yii\web\JqueryAsset;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Evento */
 /* @var $form yii\widgets\ActiveForm */
+
+?>
+
+<?php
+$urlProvincia = Url::to(['provincias/provincias']);
+$urlPoblacion = Url::to(['poblacion/poblacion']);
+$provincia = $model->provincia;
+$poblacion = $model->poblacion;
+
+$js = <<<EOT
+var urlProvincia = "$urlProvincia";
+var urlPoblacion = "$urlPoblacion";
+
+EOT;
+$this->registerJs($js);
+$this->registerJsFile(
+    '/js/ajaxEventos.js',
+    ['depends' => [JqueryAsset::className()]]
+);
 ?>
 
 <div class="evento-form">
@@ -26,7 +45,9 @@ use \app\models\TipoEvento;
       'language' =>'es',
     ]) ?>
 
-    <?= $form->field($model, 'lugar')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'provincia')->dropDownList(['' => 'Selecciona una provincia...']);?>
+
+    <?= $form->field($model, 'poblacion')->dropDownList(['' => 'Selecciona una población...']);?>
 
     <?= $form->field($model, 'tipo_evento')->textInput()->dropDownList($tipos) ?>
 

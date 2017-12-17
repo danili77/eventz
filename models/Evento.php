@@ -11,7 +11,8 @@ use Yii;
 * @property string $nombre
 * @property string $descripcion
 * @property string $fecha
-* @property string $lugar
+* @property string $poblacion
+*  @property string $provincia
 * @property integer $tipo_evento
 * @property integer $usuarios_id
 *
@@ -36,12 +37,13 @@ class Evento extends \yii\db\ActiveRecord
   public function rules()
   {
     return [
-      [['nombre', 'descripcion', 'lugar', 'tipo_evento', 'usuarios_id'], 'required'],
+      [['nombre', 'descripcion', 'poblacion','provincia', 'tipo_evento', 'usuarios_id'], 'required'],
       [['descripcion'], 'string'],
       [['fecha'], 'safe'],
       [['tipo_evento', 'usuarios_id'], 'integer'],
       [['nombre'], 'string', 'max' => 100],
-      [['lugar'], 'string', 'max' => 300],
+      [['poblacion'], 'string', 'max' => 300],
+      [['provincia'], 'string', 'max' => 300],
       [['tipo_evento'], 'exist', 'skipOnError' => true, 'targetClass' => TipoEvento::className(), 'targetAttribute' => ['tipo_evento' => 'id']],
       [['usuarios_id'], 'exist', 'skipOnError' => true, 'targetClass' => Usuario::className(), 'targetAttribute' => ['usuarios_id' => 'id']],
     ];
@@ -58,7 +60,8 @@ class Evento extends \yii\db\ActiveRecord
       'nombre' => 'Evento',
       'descripcion' => 'Descripción',
       'fecha' => 'Fecha',
-      'lugar' => 'Lugar',
+      'poblacion' => 'Poblacion',
+      'provincia' => 'Provincia',
       'tipo_evento' => 'Tipo de evento',
       'usuarios_id' => 'Usuario creador',
     ];

@@ -71,7 +71,10 @@ $this->params['breadcrumbs'][] = $this->title;
                 'width' => '100px',
             ],
             [
-                'attribute' => 'lugar',
+                'attribute' => 'poblacion',
+            ],
+            [
+                'attribute' => 'provincia',
             ],
             [
                 'label' => 'Tipo',

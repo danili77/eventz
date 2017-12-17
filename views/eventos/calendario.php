@@ -20,6 +20,7 @@ $url = Url::to(['eventos/create-calendario']);
 $js = <<<EOT
 $(document).on('click','.fc-day',function() {
     var date=$(this).attr('data-date');
+    alert("entra");
 
     $.get('$url', {'date': date}, function(data) {
         $('#modal').modal('show')

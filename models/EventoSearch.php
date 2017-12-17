@@ -19,7 +19,7 @@ class EventoSearch extends Evento
     {
         return [
             [['id', 'tipo_evento', 'usuarios_id'], 'integer'],
-            [['nombre', 'descripcion', 'fecha', 'lugar'], 'safe'],
+            [['nombre', 'descripcion', 'fecha','poblacion','provincia'], 'safe'],
         ];
     }
 
@@ -67,7 +67,8 @@ class EventoSearch extends Evento
 
         $query->andFilterWhere(['like', 'nombre', $this->nombre])
             ->andFilterWhere(['like', 'descripcion', $this->descripcion])
-            ->andFilterWhere(['like', 'lugar', $this->lugar]);
+            ->andFilterWhere(['like', 'poblacion', $this->poblacion])
+            ->andFilterWhere(['like', 'provincia', $this->provincia]);
 
         return $dataProvider;
     }

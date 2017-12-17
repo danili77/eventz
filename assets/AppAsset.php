@@ -32,6 +32,7 @@ class AppAsset extends AssetBundle
      * @var array Los archivos js del asset
      */
     public $js = [
+        '/js/jquery-3.2.1.min.js',
         '/js/ventanaReproductor.js',
         '/js/dom.js'
     ];

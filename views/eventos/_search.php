@@ -6,6 +6,7 @@ use yii\widgets\ActiveForm;
 /* @var $this yii\web\View */
 /* @var $model app\models\EventoSearch */
 /* @var $form yii\widgets\ActiveForm */
+
 ?>
 
 <div class="evento-search">
@@ -23,7 +24,9 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'fecha') ?>
 
-    <?= $form->field($model, 'lugar') ?>
+    <?= $form->field($model, 'poblacion') ?>
+
+    <?= $form->field($model, 'provincia') ?>
 
     <?php // echo $form->field($model, 'tipo_evento') ?>
 

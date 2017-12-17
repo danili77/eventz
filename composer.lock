@@ -279,16 +279,16 @@
         },
         {
             "name": "bower-asset/moment",
-            "version": "2.19.4",
+            "version": "2.20.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/moment/moment.git",
-                "reference": "fea48bb69eda8c0459915d6aa66a910a4d43a55b"
+                "reference": "0e67426b8e8d200a3ca7dab046040717110e87e6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/moment/moment/zipball/fea48bb69eda8c0459915d6aa66a910a4d43a55b",
-                "reference": "fea48bb69eda8c0459915d6aa66a910a4d43a55b",
+                "url": "https://api.github.com/repos/moment/moment/zipball/0e67426b8e8d200a3ca7dab046040717110e87e6",
+                "reference": "0e67426b8e8d200a3ca7dab046040717110e87e6",
                 "shasum": ""
             },
             "type": "bower-asset-library",
@@ -319,7 +319,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2017-12-11T01:04:52+00:00"
+            "time": "2017-12-17T01:09:05+00:00"
         },
         {
             "name": "bower-asset/punycode",
@@ -748,12 +748,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kartik-v/yii2-grid.git",
-                "reference": "01a52accfe58eab2444a4085b1d5589a4d6e0f90"
+                "reference": "af3712c9798d0e9ac4f07404f8b67879b508efff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/yii2-grid/zipball/01a52accfe58eab2444a4085b1d5589a4d6e0f90",
-                "reference": "01a52accfe58eab2444a4085b1d5589a4d6e0f90",
+                "url": "https://api.github.com/repos/kartik-v/yii2-grid/zipball/af3712c9798d0e9ac4f07404f8b67879b508efff",
+                "reference": "af3712c9798d0e9ac4f07404f8b67879b508efff",
                 "shasum": ""
             },
             "require": {
@@ -793,7 +793,7 @@
                 "widget",
                 "yii2"
             ],
-            "time": "2017-12-08T03:15:18+00:00"
+            "time": "2017-12-17T04:48:02+00:00"
         },
         {
             "name": "kartik-v/yii2-krajee-base",

@@ -30,7 +30,6 @@
         "kartik-v/yii2-widget-select2": "@dev",
         "mpdf/mpdf":"^7.0",
         "yiisoft/yii2-apidoc": "^2.1"
-
     },
     "require-dev": {
         "yiisoft/yii2-gii": "~2.0.0",

@@ -22,6 +22,5 @@ return [
     'dsn' => "pgsql:host=$host;port=$port;dbname=$dbname",
     'username' => $username,
     'password' => $password,
-    'charset' => 'utf8',	
+    'charset' => 'utf8'
 ];
-

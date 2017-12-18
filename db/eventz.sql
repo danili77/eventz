@@ -4,9 +4,9 @@ create table usuarios(
     id       bigserial   constraint pk_usuarios primary key,
     nombre   varchar(15) not null constraint uq_usuarios_nombre unique,
     password varchar(60) not null,
-    email    varchar(255) not null,	
+    email    varchar(255) not null,
     token    varchar(32),
-    created_at date default current_date					
+    created_at date default current_date
 );
 
 drop table if exists tipo_evento cascade;
@@ -23,7 +23,7 @@ create table eventos(
     nombre          varchar(100) not null,
     descripcion     text         not null,
     fecha           date  not null default current_date,
-    lugar 	    varchar(255) not null,			
+    lugar 	    varchar(255) not null,
     tipo_evento     bigint       not null constraint fk_eventos_tipo_evento
                                  references tipo_evento(id) on delete cascade
                                  on update cascade,
@@ -31,7 +31,7 @@ create table eventos(
                                  references usuarios(id)
                                  on delete cascade
                                  on update cascade
-    
+
 );
 
 drop table if exists comentarios cascade;
@@ -44,17 +44,8 @@ create table comentarios(
                                     references eventos(id)
                                     on delete no action
                                     on update cascade,
-    usuarios_id         bigint      constraint fk_usuarios_id       
+    usuarios_id         bigint      constraint fk_usuarios_id
                                     references usuarios(id)
-                                    on delete no action 
+                                    on delete no action
                                     on update cascade
 );
-
-
-
-
-
-
-
-
-

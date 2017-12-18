@@ -1,6 +1,6 @@
 ----Insertar usuarios----
 insert into usuarios(nombre,email,password)
-values('dani','daniel.lorenzo@iesdonana.org',crypt('dani',gen_salt('bf',13))),
+values('dani','dani@gmail.com',crypt('dani',gen_salt('bf',13))),
 ('pepe','pepe@gmail.com',crypt('pepe',gen_salt('bf',13))),
 ('maria','maria@gmail.com',crypt('maria',gen_salt('bf',13))),
 ('admin','admin@gmail.com',crypt('admin',gen_salt('bf',13)));
@@ -30,7 +30,7 @@ insert into eventos(nombre,descripcion,fecha,lugar,tipo_evento,usuarios_id)
 values('Feria de Sanlucar de Barrameda','La Feria de la Manzanilla se inaugurará la noche del martes 23 de mayo al final de la Calzada de la Duquesa, en un acto que comenzará a las 22.00 horas con la actuación del dúo sanluqueño Las Carlotas. Será a los pies de la portada, que se encenderá media hora más tarde cuando el alcalde, Víctor Mora, presione el interruptor y la luz se haga en todo el recinto ferial.','2017/05/23','Sanlucar de Barrameda',1,1);
 
 
-insert into eventos(nombre,descripcion,fecha,lugar,tipo_evento,usuarios_id)
+insert into eventos(nombre,descripcion,fecha,lu,tipo_evento,usuarios_id)
 values('Desafio Doñana','El Desafío Doñana es una carrera de resistencia dentro del segmento de los eventos de larga distancia compuesta por tres disciplinas deportivas diferentes: ciclismo, natación y carrera a pie','2017/04/06','Sanlucar de Barrameda',2,2);
 
 

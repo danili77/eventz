@@ -23,7 +23,7 @@ create table eventos(
     nombre          varchar(100) not null,
     descripcion     text         not null,
     fecha           date  not null default current_date,
-    lugar           varchar(300) not null,
+    lugar 	    varchar(255) not null,			
     tipo_evento     bigint       not null constraint fk_eventos_tipo_evento
                                  references tipo_evento(id) on delete cascade
                                  on update cascade,

@@ -15,21 +15,21 @@ use yii\web\JqueryAsset;
 ?>
 
 <?php
-$urlProvincia = Url::to(['provincias/provincias']);
-$urlPoblacion = Url::to(['poblacion/poblacion']);
-$provincia = $model->provincia;
-$poblacion = $model->poblacion;
+//$urlProvincia = Url::to(['provincias/provincias']);
+//$urlPoblacion = Url::to(['poblacion/poblacion']);
+//$provincia = $model->provincia;
+//$poblacion = $model->poblacion;
 
-$js = <<<EOT
-var urlProvincia = "$urlProvincia";
-var urlPoblacion = "$urlPoblacion";
+//$js = <<<EOT
+//var urlProvincia = "$urlProvincia";
+//var urlPoblacion = "$urlPoblacion";
 
-EOT;
-$this->registerJs($js);
-$this->registerJsFile(
-    '/js/ajaxEventos.js',
-    ['depends' => [JqueryAsset::className()]]
-);
+//EOT;
+//$this->registerJs($js);
+//$this->registerJsFile(
+//    '/js/ajaxEventos.js',
+//    ['depends' => [JqueryAsset::className()]]
+//);
 ?>
 
 <div class="evento-form">
@@ -45,9 +45,7 @@ $this->registerJsFile(
       'language' =>'es',
     ]) ?>
 
-    <?= $form->field($model, 'provincia')->dropDownList(['' => 'Selecciona una provincia...']);?>
-
-    <?= $form->field($model, 'poblacion')->dropDownList(['' => 'Selecciona una población...']);?>
+    <?= $form->field($model, 'lugar')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'tipo_evento')->textInput()->dropDownList($tipos) ?>
 

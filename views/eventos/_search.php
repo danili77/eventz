@@ -24,9 +24,8 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'fecha') ?>
 
-    <?= $form->field($model, 'poblacion') ?>
+    <?= $form->field($model, 'lugar') ?>
 
-    <?= $form->field($model, 'provincia') ?>
 
     <?php // echo $form->field($model, 'tipo_evento') ?>
 
